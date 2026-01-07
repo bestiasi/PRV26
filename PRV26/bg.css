@@ -1,0 +1,414 @@
+.bg_layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    pointer-events: none;
+}
+
+.layer_dirty {
+    width: 100%;
+    height: 100%;
+    background-image: url('backgrounds/Dirty-Surface-Texture-08-min.jpg');
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    opacity: 0.4;
+    z-index: -2;
+}
+
+.bg_element{
+    position: absolute;
+    z-index: 1;
+}
+
+.dirty_surface{
+    position: absolute;
+    z-index: -3;
+    opacity: 0.4;
+    width: 100vw;
+    max-height: 100vh;
+}
+
+/* .grid_lp{
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    min-height: 100vh;
+    opacity: 0.2;
+} */
+
+/* .grid_website{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.7;
+} */
+
+.logo_lp{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 750px;
+    top: 50%;
+    transform: translateY(-50%);
+    scale: 0.95;
+    width: 47vw;
+}
+
+/* landing page */
+#D1{
+    bottom: -100px;
+    left: -100px;
+    width: 27.5vw;
+}
+
+#D2{
+    transform: rotate(-87.44deg);
+    right: 10px;
+    top: 10px;
+    width: 27.5vw;
+}
+
+#C1{
+    transform: rotate(28.64deg);
+    left: -20px;
+    top: -10px;
+    width: 27.5vw;
+}
+
+#C2{
+    transform: rotate(37.16deg);
+    right: -10px;
+    bottom: -40px;
+    width: 27.5vw;
+}
+
+#echer1{
+    transform: rotate(74.69deg);
+    width: 7vw;
+    top: -15px;
+}
+
+#mouse1{
+    transform: rotate(-31.13deg);
+    top: 50%;
+    width: 7vw;
+}
+
+#tv1{
+    transform: rotate(30.5deg);
+    top: 32%;
+    left: 18%;
+    width: 7vw;
+}
+
+#wifi1{
+    transform: rotate(23.61deg);
+    top: 42%;
+    right: 20%;
+    width: 7vw;
+}
+
+#usb1{
+    transform: rotate(-56.9deg);
+    right: 3%;
+    top: 140px;
+    width: 7vw;
+}
+
+#building1{
+    transform: rotate(-25.54deg);
+    bottom: 0;
+    right: 2%;
+    width: 7vw;
+}
+
+/* landing page */
+/* main page */
+
+#usb2{
+    transform: rotate(-56.9deg);
+    right: 8vw;
+    top: 10vh;
+    width: 20vw;
+}
+
+#bluetooth1{
+    transform: rotate(19.86deg);
+    top: 10vh;
+    left: 10vw;
+    width: 10vw;
+}
+
+#tv2{
+    transform: rotate(-8.91deg);
+    left: 45vw;
+    top: 15vh;
+    width: 7vw;
+}
+
+#wifi2{
+    transform: rotate(-24.01deg);
+    bottom: -12.5vh;
+    left: -7vw;
+    width: 7vw;
+}
+
+#echer2{
+    transform: rotate(66.19deg);
+    bottom: -10vh;
+    right: -7vw;
+    width: 7vw;
+}
+
+#clicker1{
+    transform: rotate(-25.54deg);
+    bottom: -20vh;
+    width: 5vw;
+}
+
+#pencil1{
+    transform: rotate(16.17deg);
+    width: 7vw;
+    right: -24vw;
+    bottom: -30vh;
+}
+
+#D3{
+    transform: rotate(46.74deg);
+    top: 35vh;
+    left: -250px;
+    width: 27.5vw;
+}
+
+#C3{
+    transform: rotate(22.36deg);
+    top: 40vh;
+    right: -160px;
+    width: 27.5vw;
+}
+
+#C4{
+    z-index: -1;
+    transform: rotate(137.8deg);
+    top: -30vh;
+    left: -3vw;
+    width: 35vw;
+}
+
+#C5{
+    z-index: -1;
+    transform: rotate(-13.7deg);
+    bottom: -35vh;
+    left: -2vw;
+    width: 35vw;
+}
+
+#wrench1{
+    transform: rotate(17.8deg);
+    bottom: -25vh;
+    width: 7vw;
+}
+
+#floppy1{
+    transform: rotate(-120.39deg);
+    bottom: -30vh;
+    right: 7vw;
+    width: 15vw;
+}
+
+#mouse2{
+    transform: rotate(-31.13deg);
+    top: -24vh;
+    left: 3vw;
+    width: 9vw;
+}
+
+#tv3{
+    transform: rotate(30.5deg);
+    top: -24vh;
+    right: 3vw;
+    width: 7vw;
+}
+
+#wifi3{
+    transform: rotate(-23.76deg);
+    top: -27vh;
+    left: 50vw;
+    width: 5vw;
+}
+
+#cog1{
+    width: 9vw;
+    top: -25vh;
+    left: 6vw;
+}
+
+#signal1{
+    width: 7vw;
+    top: -19vh;
+    right: 6vw;
+    transform: rotate(30.4deg);
+}
+
+.cafeluta_dialog{
+    position: relative;
+    margin-top: 20vh;
+    right: -50vw;
+    transform: translateX(-20%);
+    width: 50vw;
+    opacity: 0;
+    transition: 0.7s ease-in-out;
+}
+
+#C6{
+    width: 27.5vw;
+    right: -7vw;
+    bottom:85vh;
+    transform: rotate(36.56deg);
+}
+
+#D4{
+    width: 27.5vw;
+    left: -7vw;
+    bottom:82vh;
+    transform: rotate(-87.44deg);
+}
+
+#clicker2{
+    width: 9vw;
+    top: 10vw;
+    left: 15vw;
+    transform: rotate(20.71deg);
+}
+
+#usb3{
+    width: 10vw;
+    top: 6vw;
+    right: 13vw;
+    transform: rotate(-57deg);
+}
+
+#tv4{
+    transform: rotate(-48.5deg);
+    top: 5vh;
+    width: 6vw;
+    left: 10vw;
+}
+
+#wifi4{
+    transform: rotate(36.67deg);
+    top: 0vh;
+    width: 6vw;
+    right: 9vw;
+}
+
+#mouse3{
+    transform: rotate(-31.13deg);
+    top: 0;
+    width: 6vw;
+    right: 8vw;
+}
+
+#echer3{
+    transform: rotate(74.7deg);
+    top: -5vh;
+    width: 10vw;
+    left: 10vw;
+}
+
+#C7{
+    z-index: -1;
+    left: 0;
+    width: 40vw;
+    transform: rotate(-100.27deg);
+    top: 12.5vw;
+}
+
+#C8{
+    z-index: -1;
+    width: 40vw;
+    transform: translateX(3%) rotate(100.31deg);
+    top: 5vw;
+}
+
+#C9{
+    z-index: -1;
+    right: -5vw;
+    width: 40vw;
+    transform: rotate(-104.18deg);
+    top: 12.5vw;
+}
+
+/* main page */
+
+#p1{
+    background: url(photos/photo1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p2{
+    background: url(photos/photo2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p3{
+    background: url(photos/photo3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p4{
+    background: url(photos/photo4.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p5{
+    background: url(photos/photo5.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p6{
+    background: url(photos/photo6.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p7{
+    background: url(photos/photo7.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p8{
+    background: url(photos/photo8.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#t1{
+    background: url(photos/testimonial1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#t2{
+    background: url(photos/testimonial2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#t3{
+    background: url(photos/testimonial3.jpg);
+    background-position: center;
+    background-size: cover;
+}

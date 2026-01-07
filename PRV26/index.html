@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "bg.css">
+    <link rel = "stylesheet" href = "style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prove it</title>
+</head>
+<body>  
+     <header class = "header">
+            <img src = "logo/Sigla Postari.png" id = "logo_header">
+            <div class = "header_links">
+                <div class = "header_link"><a href = "#eveniment">Eveniment</a></div>
+                <div class = "header_link"><a href = "#probe">Probe</a></div>
+                <div class = "header_link"><a href = "#sponsori">Sponsori</a></div>
+                <div class = "header_link"><a href = "#echipa">Echipă</a></div>
+                <div class = "header_link"><a href = "#contact">Contact</a></div>
+            </div>
+    </header>
+    <div id="scroll-trigger" style="position: absolute; top: 100vh; height: 1px; width: 100%;"></div>
+    <!-- <img src = "backgrounds/Website_grid.svg" class = "grid_website"> -->
+    <section class = "landing_page">
+        <img src = "backgrounds/Dirty-Surface-Texture-08-min.jpg" class = "dirty_surface" alt = "">
+        <!-- <img src = "backgrounds/grid_lp-min.png" class = "grid_lp"> -->
+        <img src = "logo/LogoPRV.png" class = "logo_lp" alt = "Proveit logo">
+        <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C1">
+        <img src = "bg_elements/bgShape_dinosaur.png" class = "bg_element" id = "D1">
+        <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C2">
+        <img src = "bg_elements/bgShape_dinosaur.png" class = "bg_element" id = "D2">
+        <img src = "bg_elements/Echer.png" class = "bg_element" id = "echer1">
+        <img src = "bg_elements/MouseV1.png" class = "bg_element" id = "mouse1">
+        <img src = "bg_elements/TVV1.png" class = "bg_element" id = "tv1">
+        <img src = "bg_elements/wifiV2.png" class = "bg_element" id = "wifi1">
+        <img src = "bg_elements/USBV3.png" class = "bg_element" id = "usb1">
+        <img src = "bg_elements/BuildingV1.png" class = "bg_element" id = "building1">
+        <div class = "c2a">
+            <div class = "arrows">
+                <img src = "bg_elements/arrow.png" id = "arrows_img">
+                <img src = "bg_elements/arrow.png" id = "arrows_img">
+                <img src = "bg_elements/arrow.png" id = "arrows_img">
+            </div>
+            <!-- <button id = "c2a_button">
+                Afla mai multe
+            </button> -->
+        </div>
+    </section>
+    <section class = "main_page">
+        <div class = "bg_layer">
+            <div class = "layer_dirty"></div>
+        </div>
+        <!-- <img src = "backgrounds/Website_grid.svg" class = "grid_website"> -->
+        <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C6">
+        <img src = "bg_elements/bgShape_dinosaur.png" class = "bg_element" id = "D4">
+        <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C3">
+        <img src = "bg_elements/bgShape_dinosaur.png" class = "bg_element" id = "D3">
+        <!-- <img src = "bg_elements/TVV1.png" class = "bg_element" id = "tv2"> -->
+        <img src = "bg_elements/USBV3.png" class = "bg_element" id = "usb2">
+        <img src = "bg_elements/BluetoothV2.png" class = "bg_element" id = "bluetooth1">
+    
+
+        <div class = "timer_div">
+            <p id = "timer">00:00:00:00</p>
+
+            <div class = "info_PRV">
+                <div class = "cand">Când?</div>
+                <div class = "unde">Unde?</div>
+                <div class = "data">4 - 5 Aprilie</div>
+                <div class = "locatie">?</div>
+            </div>
+
+            <button id = "c2a_button">Înscrie-te!</button>
+
+            <img src = "bg_elements/wifiV2.png" class = "bg_element" id = "wifi2">
+            <img src = "bg_elements/Echer.png" class = "bg_element" id = "echer2">
+            <img src = "bg_elements/ClickerV2.png" class = "bg_element" id = "clicker1">
+            <img src = "bg_elements/PencilAndRulerV2.png" class = "bg_element" id = "pencil1">
+
+        </div>
+
+        <div class = "despre_PRV animate-on-scroll" id = "eveniment">
+            <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C4">
+            <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C5">
+            <img src = "bg_elements/wrenchV1.png" class = "bg_element" id = "wrench1">
+            <img src = "bg_elements/FloppyDiskV2.png" class = "bg_element" id = "floppy1">
+            <h1>Despre Prove it</h1>
+            <div class = "img_text_flex">
+                <div class = "img_container"></div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eaque ipsam? Suscipit cum reprehenderit vitae in repudiandae minus at cupiditate fugiat impedit excepturi! Et eaque sed cumque optio maxime est!
+                </p>
+            </div>
+        </div>
+
+        <div class = "ce_trebuie_sa_stii animate-on-scroll">
+            <h1>Ce trebuie să știi?</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil, omnis esse excepturi unde accusantium adipisci itaque placeat nostrum, corporis dolor tempora? Vitae aliquid ipsam deserunt veritatis fugiat excepturi doloribus?
+            </p>
+        </div>
+
+        <div class = "img_sliders">
+            <img src = "bg_elements/MouseV1.png" class = "bg_element" id = "mouse2">
+            <img src = "bg_elements/wifiV2.png" class = "bg_element" id = "wifi3">
+            <img src = "bg_elements/TVV1.png" class = "bg_element" id = "tv3">
+
+            <h1>Poze din edițiile anterioare</h1>
+            <div class = "slider_right">
+                <div class = "img_right">
+                    <div class = "img_container_editii zoomable" id = "p1"></div>
+                    <div class = "img_container_editii zoomable" id = "p2"></div>
+                    <div class = "img_container_editii zoomable" id = "p3"></div>
+                    <div class = "img_container_editii zoomable" id = "p4"></div>
+                </div>
+                <div aria-hidden class = "img_right">
+                    <div class = "img_container_editii zoomable" id = "p1"></div>
+                    <div class = "img_container_editii zoomable" id = "p2"></div>
+                    <div class = "img_container_editii zoomable" id = "p3"></div>
+                    <div class = "img_container_editii zoomable" id = "p4"></div>
+                </div>
+            </div>
+            <div class = "slider_left">
+                <div class = "img_left">
+                    <div class = "img_container_editii zoomable" id = "p5"></div>
+                    <div class = "img_container_editii zoomable" id = "p6"></div>
+                    <div class = "img_container_editii zoomable" id = "p7"></div>
+                    <div class = "img_container_editii zoomable" id = "p8"></div>
+                </div>
+                <div aria-hidden class = "img_left">
+                    <div class = "img_container_editii zoomable" id = "p5"></div>
+                    <div class = "img_container_editii zoomable" id = "p6"></div>
+                    <div class = "img_container_editii zoomable" id = "p7"></div>
+                    <div class = "img_container_editii zoomable" id = "p8"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class = "testimoniale animate-on-scroll">
+            <img src = "bg_elements/CogV1.png" class = "bg_element" id = "cog1">
+            <img src = "bg_elements/SignalV1.png" class = "bg_element" id = "signal1">
+
+            <h1>Testimoniale</h1>
+
+            <div class = "testimonial">
+                <div class = "testimoniale_img_nume">
+
+                    <div class = "pfp_t" id = "t1"></div>
+                    <div class = "nume_cine_t">
+                        <p style = "font-weight: bold;">Nume prenume</p>
+                        <p>Cine este</p>
+                    </div>
+
+                </div>
+
+                <div class = "buttons_paragraph">
+                    <button id = "slider_button" class = "prev">&#10094</button>
+                    <p>Buna asta e testimonial smecheros mergeti la prove it</p>
+                    <button id = "slider_button" class = "next">&#10095</button>
+                </div>
+            </div>
+            <div class = "testimonial">
+                <div class = "testimoniale_img_nume">
+
+                    <div class = "pfp_t" id = "t2"></div>
+                    <div class = "nume_cine_t">
+                        <p style = "font-weight: bold;">Nume prenume</p>
+                        <p>Cine este</p>
+                    </div>
+
+                </div>
+
+                <div class = "buttons_paragraph">
+                    <button id = "slider_button" class = "prev">&#10094</button>
+                    <p>Ce caut aici</p>
+                    <button id = "slider_button" class = "next">&#10095</button>
+                </div>
+            </div>
+            <div class = "testimonial">
+                <div class = "testimoniale_img_nume">
+
+                    <div class = "pfp_t" id = "t3"></div>
+                    <div class = "nume_cine_t">
+                        <p style = "font-weight: bold;">Nume prenume</p>
+                        <p>Cine este</p>
+                    </div>
+
+                </div>
+
+                <div class = "buttons_paragraph">
+                    <button id = "slider_button" class = "prev">&#10094</button>
+                    <p>Innebunesc</p>
+                    <button id = "slider_button" class = "next">&#10095</button>
+                </div>
+            </div>
+    
+        </div>
+        
+        <img src = "photos/cafeluta_dialog.png" class = "cafeluta_dialog">
+        
+        <div class = "probe animate-on-scroll" id = "probe">
+            <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C7">
+            <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C8">
+            <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C9">
+
+            <h1>Probe</h1>
+
+            <div class = "probe_carduri">
+
+            <div class = "card_probe">
+                <h1>Proba 1</h1>
+                <div class = "img_container_probe"></div>
+                <div class = "detalii_probe">
+                    <button>Detalii</button>
+                </div>
+            </div>
+
+             <div class = "card_probe">
+                <h1>Proba 2</h1>
+                <div class = "img_container_probe"></div>
+                <div class = "detalii_probe">
+                    <button>Detalii</button>
+                </div>
+            </div>
+
+             <div class = "card_probe">
+                <h1>Proba 3</h1>
+                <div class = "img_container_probe"></div>
+                <div class = "detalii_probe">
+                    <button>Detalii</button>
+                </div>
+            </div>
+
+            </div>
+
+            <div class = "descrieri_container">
+                <div class = "descriere">
+                    <h1>Proba 1</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, qui? Quos, similique iste voluptas praesentium omnis perspiciatis, veritatis fuga distinctio animi illum itaque saepe rem placeat molestiae provident culpa tempore?</p>
+                </div>
+
+                <div class = "descriere">
+                    <h1>Proba 2</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, qui? Quos, similique iste voluptas praesentium omnis perspiciatis, veritatis fuga distinctio animi illum itaque saepe rem placeat molestiae provident culpa tempore?</p>
+                </div>
+
+                <div class = "descriere">
+                    <h1>Proba 3</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, qui? Quos, similique iste voluptas praesentium omnis perspiciatis, veritatis fuga distinctio animi illum itaque saepe rem placeat molestiae provident culpa tempore?</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class = "sponsori" id = "sponsori">
+            <img src = "bg_elements/MouseV1.png" class = "bg_element" id = "mouse3">
+            <img src = "bg_elements/Echer.png" class = "bg_element" id = "echer3">
+
+            <h1>Sponsori</h1>
+
+            <div class = "sponsori_row">
+                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori"></div>
+            </div>
+
+             <div class = "sponsori_row">
+                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori"></div>
+            </div>
+
+             <div class = "sponsori_row">
+                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori"></div>
+            </div>
+            
+        </div>
+
+        <div class = "parteneri">
+            <img src = "bg_elements/TVV1.png" class = "bg_element" id = "tv4">
+            <img src = "bg_elements/wifiV2.png" class = "bg_element" id = "wifi4">
+
+            <h1>Parteneri anuali</h1>
+
+            <div class = "sponsori_row">
+                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori"></div>
+            </div>
+
+             <div class = "sponsori_row">
+                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori"></div>
+            </div>
+
+             <div class = "sponsori_row">
+                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori"></div>
+            </div>
+            
+        </div>
+
+        <div class = "echipa" id = "echipa">
+            <img src = "bg_elements/ClickerV2.png" class = "bg_element" id = "clicker2">
+            <img src = "bg_elements/USBV3.png" class = "bg_element" id = "usb3">
+
+            <h1>Echipa</h1>
+
+             <div class = "sponsori_row">
+                <div class = "poze_nume_echipa">
+                    <div class = "img_container_sponsori" id = "teo"></div>
+                    <div class = "nume">
+                        <h1>Teodora Coțovan</h1>
+                        <h1>Coordonatoare</h1>
+                    </div>
+                </div>
+             </div>
+
+            <div class = "sponsori_row">
+                <div class = "poze_nume_echipa">
+                    <div class = "img_container_sponsori" id = "cata"></div>
+                    <div class = "nume">
+                        <h1>Cătălina Albu</h1>
+                        <h1>FR Companii</h1>
+                    </div>
+                </div>
+                <div class = "poze_nume_echipa">
+                    <div class = "img_container_sponsori" id = "florin"></div>
+                    <div class = "nume">
+                        <h1>Florin Vintilă</h1>
+                        <h1>FR Produse</h1>
+                    </div>
+                </div>
+                <div class = "poze_nume_echipa">
+                    <div class = "img_container_sponsori" id = "iulian"></div>
+                    <div class = "nume">
+                        <h1>Iulian Bujoreanu</h1>
+                        <h1>Marketing</h1>
+                    </div>
+                </div>
+            </div>
+
+             <div class = "sponsori_row">
+                <div class = "poze_nume_echipa">
+                    <div class = "img_container_sponsori" id = "mircea"></div>
+                    <div class = "nume">
+                        <h1>Mircea Nechita</h1>
+                        <h1>Design</h1>
+                    </div>
+                </div>
+                <div class = "poze_nume_echipa">
+                    <div class = "img_container_sponsori" id = "cezara"></div>
+                    <div class = "nume">
+                        <h1>Cezara Cozaru</h1>
+                        <h1>Social Media</h1>
+                    </div>
+                </div>
+                <div class = "poze_nume_echipa">
+                    <div class = "img_container_sponsori" id = "dennis"></div>
+                    <div class = "nume">
+                        <h1>Dennis Ivoncu</h1>
+                        <h1>IT&Logistică</h1>
+                    </div>
+                </div>
+            </div>
+
+             <div class = "sponsori_row">
+                <div class = "poze_nume_echipa">
+                    <div class = "img_container_sponsori" id = "ionela"></div>
+                    <div class = "nume">
+                        <h1>Ionela Constantin</h1>
+                        <h1>Topicuri</h1>
+                    </div>
+                </div>
+                <div class = "poze_nume_echipa">
+                    <div class = "img_container_sponsori" id = "ancuta"></div>
+                    <div class = "nume">
+                        <h1>Ancuța Flutur</h1>
+                        <h1>Experience</h1>
+                    </div>
+                </div>
+                <div class = "poze_nume_echipa">
+                    <div class = "img_container_sponsori" id = "matei"></div>
+                    <div class = "nume">
+                        <h1>Matei Iordache</h1>
+                        <h1>HR</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button id = "c2a_button">Hai să te înscrii!</button>
+        
+        <footer class = "footer">
+            <div class = "tuiasi">
+                <p>Eveniment realizat cu sprijinul</p>
+                <img src = "logo/tuiasi.png" id = "logo_tuiasi">
+                <p>Universitatea Tehnică</p>
+                <p>„Gheorghe Asachi” din Iași</p>
+            </div>
+
+            <img src = "logo/Sigla BEST alba.png" class = "sigla_BEST">
+
+            <div class = "contact" id = "contact">
+                <h2>Contact</h2>
+
+                <div class = "locatie">
+                    <img src = "logo/Location_site.png" id = "footer_img">
+                    <p>Campus Tudor Vladimirescu cămin T19 camera 16A</p>
+                </div>
+
+                <div class = "tel_mail">
+                    <div class = "tel">
+                        <img src = "logo/Phone_site.png" id = "footer_img">
+                        <p>+40 754 665 038</p>
+                    </div>
+
+                    <div class = "mail">
+                        <img src = "logo/Mail_site.png" id = "footer_img">
+                        <p>contact@bestis.ro</p>
+                    </div>
+                </div>
+
+                <div class = "sm_icons">
+                    <img src = "logo/Instagram_site.png">
+                    <img src = "logo/Facebook_site.png">
+                    <img src = "logo/YouTube_site.png" style = "margin-right: 1%;">
+                    <img src = "logo/LinkedIn_site.png">
+                    <img src = "logo/TikTok_site.png">
+                </div>
+
+            </div>
+        </footer>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img id="lightbox-img" src="">
+    </div>
+    <script src = "index.js"></script>
+</body>
+</html>
