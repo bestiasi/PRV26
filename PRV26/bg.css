@@ -20,6 +20,8 @@
 .bg_element{
     position: absolute;
     z-index: 1;
+    user-select: none;
+    pointer-events: none;
 }
 
 .dirty_surface{
@@ -257,10 +259,8 @@
 }
 
 .cafeluta_dialog{
-    position: relative;
-    margin-top: 20vh;
-    right: -50vw;
-    transform: translateX(-20%);
+    position: absolute;
+    right: -15vw;
     width: 50vw;
     opacity: 0;
     transition: 0.7s ease-in-out;
@@ -269,14 +269,14 @@
 #C6{
     width: 27.5vw;
     right: -7vw;
-    bottom:85vh;
+    bottom:65vh;
     transform: rotate(36.56deg);
 }
 
 #D4{
     width: 27.5vw;
     left: -7vw;
-    bottom:82vh;
+    bottom:62vh;
     transform: rotate(-87.44deg);
 }
 
@@ -409,6 +409,24 @@
 
 #t3{
     background: url(photos/testimonial3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#pr1{
+    background: url(photos/proba1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#pr2{
+    background: url(photos/proba2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#pr3{
+    background: url(photos/proba3.jpg);
     background-position: center;
     background-size: cover;
 }

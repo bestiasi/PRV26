@@ -12,13 +12,13 @@
 </head>
 <body>  
      <header class = "header">
-            <img src = "logo/Sigla Postari.png" id = "logo_header">
+            <a href = "#timer" style = "max-width:11%; margin-left:6.7%"><img src = "logo/Sigla Postari.png" id = "logo_header"></a>
             <div class = "header_links">
-                <div class = "header_link"><a href = "#eveniment">Eveniment</a></div>
-                <div class = "header_link"><a href = "#probe">Probe</a></div>
-                <div class = "header_link"><a href = "#sponsori">Sponsori</a></div>
-                <div class = "header_link"><a href = "#echipa">Echipă</a></div>
-                <div class = "header_link"><a href = "#contact">Contact</a></div>
+                <a href = "#eveniment" class = "header_link">Eveniment</a>
+                <a href = "#probe" class = "header_link">Probe</a>
+                <a href = "#sponsori" class = "header_link">Sponsori</a>
+                <a href = "#echipa" class = "header_link">Echipă</a>
+                <a href = "#contact" class = "header_link">Contact</a>
             </div>
     </header>
     <div id="scroll-trigger" style="position: absolute; top: 100vh; height: 1px; width: 100%;"></div>
@@ -88,7 +88,7 @@
             <img src = "bg_elements/FloppyDiskV2.png" class = "bg_element" id = "floppy1">
             <h1>Despre Prove it</h1>
             <div class = "img_text_flex">
-                <div class = "img_container"></div>
+                <div class = "img_container zoomable"></div>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eaque ipsam? Suscipit cum reprehenderit vitae in repudiandae minus at cupiditate fugiat impedit excepturi! Et eaque sed cumque optio maxime est!
                 </p>
@@ -198,8 +198,11 @@
             </div>
     
         </div>
-        
-        <img src = "photos/cafeluta_dialog.png" class = "cafeluta_dialog">
+
+        <div class = "cafeluta_poza_div">
+            <div class = "poza_cafeluta zoomable animate-on-scroll"></div>
+            <img src = "photos/cafeluta_dialog.png" class = "cafeluta_dialog">
+        </div>
         
         <div class = "probe animate-on-scroll" id = "probe">
             <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C7">
@@ -212,7 +215,7 @@
 
             <div class = "card_probe">
                 <h1>Proba 1</h1>
-                <div class = "img_container_probe"></div>
+                <div class = "img_container_probe" id = "pr1"></div>
                 <div class = "detalii_probe">
                     <button>Detalii</button>
                 </div>
@@ -220,7 +223,7 @@
 
              <div class = "card_probe">
                 <h1>Proba 2</h1>
-                <div class = "img_container_probe"></div>
+                <div class = "img_container_probe" id = "pr2"></div>
                 <div class = "detalii_probe">
                     <button>Detalii</button>
                 </div>
@@ -228,7 +231,7 @@
 
              <div class = "card_probe">
                 <h1>Proba 3</h1>
-                <div class = "img_container_probe"></div>
+                <div class = "img_container_probe" id = "pr3"></div>
                 <div class = "detalii_probe">
                     <button>Detalii</button>
                 </div>
@@ -315,7 +318,7 @@
 
              <div class = "sponsori_row">
                 <div class = "poze_nume_echipa">
-                    <div class = "img_container_sponsori" id = "teo"></div>
+                    <a href = "https://www.linkedin.com/in/teodora-cotovan-93a94a2a1/" target = "_blank" class = "img_container_sponsori" id = "teo"></a>
                     <div class = "nume">
                         <h1>Teodora Coțovan</h1>
                         <h1>Coordonatoare</h1>
@@ -325,21 +328,21 @@
 
             <div class = "sponsori_row">
                 <div class = "poze_nume_echipa">
-                    <div class = "img_container_sponsori" id = "cata"></div>
+                    <a href = "https://www.linkedin.com/in/paula-cătălina-albu-82386a35a/" target = "_blank" class = "img_container_sponsori" id = "cata"></a>
                     <div class = "nume">
                         <h1>Cătălina Albu</h1>
                         <h1>FR Companii</h1>
                     </div>
                 </div>
                 <div class = "poze_nume_echipa">
-                    <div class = "img_container_sponsori" id = "florin"></div>
+                    <a href = "https://www.linkedin.com/in/florin-vintilă-5a550b335/" target = "_blank" class = "img_container_sponsori" id = "florin"></a>
                     <div class = "nume">
                         <h1>Florin Vintilă</h1>
                         <h1>FR Produse</h1>
                     </div>
                 </div>
                 <div class = "poze_nume_echipa">
-                    <div class = "img_container_sponsori" id = "iulian"></div>
+                    <a href = "https://www.linkedin.com/in/ștefan-iulian-bujoreanu-5a8617354/" target = "_blank" class = "img_container_sponsori" id = "iulian"></a>
                     <div class = "nume">
                         <h1>Iulian Bujoreanu</h1>
                         <h1>Marketing</h1>
@@ -349,21 +352,21 @@
 
              <div class = "sponsori_row">
                 <div class = "poze_nume_echipa">
-                    <div class = "img_container_sponsori" id = "mircea"></div>
+                    <a href = "https://www.linkedin.com/in/mircea-nechita-baa713340/" target = "_blank" class = "img_container_sponsori" id = "mircea"></a>
                     <div class = "nume">
                         <h1>Mircea Nechita</h1>
                         <h1>Design</h1>
                     </div>
                 </div>
                 <div class = "poze_nume_echipa">
-                    <div class = "img_container_sponsori" id = "cezara"></div>
+                    <a href = "https://www.linkedin.com/in/elena-cezara-cozaru-881b47208/" target = "_blank" class = "img_container_sponsori" id = "cezara"></a>
                     <div class = "nume">
                         <h1>Cezara Cozaru</h1>
                         <h1>Social Media</h1>
                     </div>
                 </div>
                 <div class = "poze_nume_echipa">
-                    <div class = "img_container_sponsori" id = "dennis"></div>
+                    <a href = "https://www.linkedin.com/in/ivoncu-dennis-gabriel-14598138a/" target = "_blank" class = "img_container_sponsori" id = "dennis"></a>
                     <div class = "nume">
                         <h1>Dennis Ivoncu</h1>
                         <h1>IT&Logistică</h1>
@@ -373,21 +376,21 @@
 
              <div class = "sponsori_row">
                 <div class = "poze_nume_echipa">
-                    <div class = "img_container_sponsori" id = "ionela"></div>
+                    <a href = "https://www.linkedin.com/in/ionela-constantin-b37326389/" target = "_blank" class = "img_container_sponsori" id = "ionela"></a>
                     <div class = "nume">
                         <h1>Ionela Constantin</h1>
                         <h1>Topicuri</h1>
                     </div>
                 </div>
                 <div class = "poze_nume_echipa">
-                    <div class = "img_container_sponsori" id = "ancuta"></div>
+                    <a href = "https://www.linkedin.com/in/ancuta-ana-maria-flutur-9342a0394/" target = "_blank" class = "img_container_sponsori" id = "ancuta"></a>
                     <div class = "nume">
                         <h1>Ancuța Flutur</h1>
                         <h1>Experience</h1>
                     </div>
                 </div>
                 <div class = "poze_nume_echipa">
-                    <div class = "img_container_sponsori" id = "matei"></div>
+                    <a href = "https://www.linkedin.com/in/george-matei-iordache-688638175/" target = "_blank" class = "img_container_sponsori" id = "matei"></a>
                     <div class = "nume">
                         <h1>Matei Iordache</h1>
                         <h1>HR</h1>
@@ -402,12 +405,12 @@
         <footer class = "footer">
             <div class = "tuiasi">
                 <p>Eveniment realizat cu sprijinul</p>
-                <img src = "logo/tuiasi.png" id = "logo_tuiasi">
+                <a href = "https://www.tuiasi.ro" target = "_blank"><img src = "logo/tuiasi.png" id = "logo_tuiasi"></a>
                 <p>Universitatea Tehnică</p>
                 <p>„Gheorghe Asachi” din Iași</p>
             </div>
 
-            <img src = "logo/Sigla BEST alba.png" class = "sigla_BEST">
+            <a href = "https://bestis.ro" target = "_blank"><img src = "logo/Sigla BEST alba.png" class = "sigla_BEST"></a>
 
             <div class = "contact" id = "contact">
                 <h2>Contact</h2>
@@ -430,11 +433,11 @@
                 </div>
 
                 <div class = "sm_icons">
-                    <img src = "logo/Instagram_site.png">
-                    <img src = "logo/Facebook_site.png">
-                    <img src = "logo/YouTube_site.png" style = "margin-right: 1%;">
-                    <img src = "logo/LinkedIn_site.png">
-                    <img src = "logo/TikTok_site.png">
+                    <a href = "https://www.instagram.com/bestiasi/" target = "_blank"><img src = "logo/Instagram_site.png"></a>
+                    <a href = "https://www.facebook.com/bestiasi" target = "_blank"><img src = "logo/Facebook_site.png"></a>
+                    <a href = "https://www.youtube.com/@BESTIasi" target = "_blank" style = "margin-right: 1%;"><img src = "logo/YouTube_site.png"></a>
+                    <a href = "https://www.linkedin.com/company/best-iasi/posts/?feedView=all" target = "_blank"><img src = "logo/LinkedIn_site.png"></a>
+                    <a href = "https://www.tiktok.com/@best.iasi" target = "_blank"><img src = "logo/TikTok_site.png"></a>
                 </div>
 
             </div>
