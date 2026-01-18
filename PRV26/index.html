@@ -4,15 +4,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" href = "bg.css">
     <link rel = "stylesheet" href = "style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prove it</title>
 </head>
+
+<!-- De adaugat meta tags in head (cu MKT ig), schimbat formatul la poze
+ sa fie WebP ca ocupa mai putin -->
+
 <body>  
      <header class = "header">
-            <a href = "#timer" style = "max-width:11%; margin-left:6.7%"><img src = "logo/Sigla Postari.png" id = "logo_header"></a>
+            <a href = "#timer" style = "max-width:11%; margin-left:6.7%">
+                <img src = "logo/Sigla Postari.png" id = "logo_header" alt = "Prove It">
+            </a>
             <div class = "header_links">
                 <a href = "#eveniment" class = "header_link">Eveniment</a>
                 <a href = "#probe" class = "header_link">Probe</a>
@@ -20,28 +25,38 @@
                 <a href = "#echipa" class = "header_link">Echipă</a>
                 <a href = "#contact" class = "header_link">Contact</a>
             </div>
+
+            <div class = "hamburger" aria-label="Menu">
+                <span class = "bar"></span>
+                <span class = "bar"></span>
+                <span class = "bar"></span>
+            </div>
     </header>
-    <div id="scroll-trigger" style="position: absolute; top: 100vh; height: 1px; width: 100%;"></div>
+    <div id="scroll-trigger"></div>
     <!-- <img src = "backgrounds/Website_grid.svg" class = "grid_website"> -->
+<main>
     <section class = "landing_page">
-        <img src = "backgrounds/Dirty-Surface-Texture-08-min.jpg" class = "dirty_surface" alt = "">
+        <!-- <div class = "bg_layer">
+            <div class = "layer_dirty"></div>
+        </div> -->
+        <!-- <img src = "backgrounds/Dirty-Surface-Texture-08-min.jpg" class = "dirty_surface"> -->
         <!-- <img src = "backgrounds/grid_lp-min.png" class = "grid_lp"> -->
-        <img src = "logo/LogoPRV.png" class = "logo_lp" alt = "Proveit logo">
-        <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C1">
-        <img src = "bg_elements/bgShape_dinosaur.png" class = "bg_element" id = "D1">
-        <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C2">
-        <img src = "bg_elements/bgShape_dinosaur.png" class = "bg_element" id = "D2">
-        <img src = "bg_elements/Echer.png" class = "bg_element" id = "echer1">
-        <img src = "bg_elements/MouseV1.png" class = "bg_element" id = "mouse1">
-        <img src = "bg_elements/TVV1.png" class = "bg_element" id = "tv1">
-        <img src = "bg_elements/wifiV2.png" class = "bg_element" id = "wifi1">
-        <img src = "bg_elements/USBV3.png" class = "bg_element" id = "usb1">
-        <img src = "bg_elements/BuildingV1.png" class = "bg_element" id = "building1">
+        <img src = "logo/LogoPRV.png" class = "logo_lp" alt = "Prove it logo">
+        <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C1" alt = "">
+        <img src = "bg_elements/bgShape_dinosaur.png" class = "bg_element" id = "D1" alt = "">
+        <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C2" alt = "">
+        <img src = "bg_elements/bgShape_dinosaur.png" class = "bg_element" id = "D2" alt = "">
+        <img src = "bg_elements/Echer.png" class = "bg_element" id = "echer1" alt = "">
+        <img src = "bg_elements/MouseV1.png" class = "bg_element" id = "mouse1" alt = "">
+        <img src = "bg_elements/TVV1.png" class = "bg_element" id = "tv1" alt = "">
+        <img src = "bg_elements/wifiV2.png" class = "bg_element" id = "wifi1" alt = "">
+        <img src = "bg_elements/USBV3.png" class = "bg_element" id = "usb1" alt = "">
+        <img src = "bg_elements/BuildingV1.png" class = "bg_element" id = "building1" alt = "">
         <div class = "c2a">
             <div class = "arrows">
-                <img src = "bg_elements/arrow.png" id = "arrows_img">
-                <img src = "bg_elements/arrow.png" id = "arrows_img">
-                <img src = "bg_elements/arrow.png" id = "arrows_img">
+                <img src = "bg_elements/arrow.png" id = "arrows_img" class = "invis_mobile" alt = "">
+                <img src = "bg_elements/arrow.png" id = "arrows_img" class = "invis_mobile" alt = "">
+                <img src = "bg_elements/arrow.png" id = "arrows_img" alt = "">
             </div>
             <!-- <button id = "c2a_button">
                 Afla mai multe
@@ -49,17 +64,17 @@
         </div>
     </section>
     <section class = "main_page">
-        <div class = "bg_layer">
+        <!-- <div class = "bg_layer">
             <div class = "layer_dirty"></div>
-        </div>
+        </div> -->
         <!-- <img src = "backgrounds/Website_grid.svg" class = "grid_website"> -->
-        <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C6">
-        <img src = "bg_elements/bgShape_dinosaur.png" class = "bg_element" id = "D4">
-        <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C3">
-        <img src = "bg_elements/bgShape_dinosaur.png" class = "bg_element" id = "D3">
+        <img src = "bg_elements/bgShape_C.png" class = "bg_element invis_mobile" id = "C6" alt = "" loading = "lazy">
+        <img src = "bg_elements/bgShape_dinosaur.png" class = "bg_element invis_mobile" id = "D4" alt = "" loading = "lazy">
+        <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C3" alt = "" loading = "lazy">
+        <img src = "bg_elements/bgShape_dinosaur.png" class = "bg_element" id = "D3" alt = "" loading = "lazy">
         <!-- <img src = "bg_elements/TVV1.png" class = "bg_element" id = "tv2"> -->
-        <img src = "bg_elements/USBV3.png" class = "bg_element" id = "usb2">
-        <img src = "bg_elements/BluetoothV2.png" class = "bg_element" id = "bluetooth1">
+        <img src = "bg_elements/USBV3.png" class = "bg_element invis_mobile" id = "usb2" alt = "" loading = "lazy">
+        <img src = "bg_elements/BluetoothV2.png" class = "bg_element invis_mobile" id = "bluetooth1" alt = "" loading = "lazy">
     
 
         <div class = "timer_div">
@@ -74,21 +89,23 @@
 
             <button id = "c2a_button">Înscrie-te!</button>
 
-            <img src = "bg_elements/wifiV2.png" class = "bg_element" id = "wifi2">
-            <img src = "bg_elements/Echer.png" class = "bg_element" id = "echer2">
-            <img src = "bg_elements/ClickerV2.png" class = "bg_element" id = "clicker1">
-            <img src = "bg_elements/PencilAndRulerV2.png" class = "bg_element" id = "pencil1">
+            <img src = "bg_elements/wifiV2.png" class = "bg_element invis_mobile" id = "wifi2" alt = "" loading = "lazy">
+            <img src = "bg_elements/Echer.png" class = "bg_element invis_mobile" id = "echer2" alt = "" loading = "lazy">
+            <img src = "bg_elements/ClickerV2.png" class = "bg_element invis_mobile" id = "clicker1" alt = "" loading = "lazy">
+            <img src = "bg_elements/PencilAndRulerV2.png" class = "bg_element invis_mobile" id = "pencil1" alt = "" loading = "lazy">
 
         </div>
 
         <div class = "despre_PRV animate-on-scroll" id = "eveniment">
-            <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C4">
-            <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C5">
-            <img src = "bg_elements/wrenchV1.png" class = "bg_element" id = "wrench1">
-            <img src = "bg_elements/FloppyDiskV2.png" class = "bg_element" id = "floppy1">
-            <h1>Despre Prove it</h1>
+            <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C4" alt = "" loading = "lazy">
+            <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C5" alt = "" loading = "lazy">
+            <img src = "bg_elements/wrenchV1.png" class = "bg_element" id = "wrench1" alt = "" loading = "lazy">
+            <img src = "bg_elements/FloppyDiskV2.png" class = "bg_element" id = "floppy1" alt = "" loading = "lazy">
+
+            <h1 class = "visually-hidden">Prove It 2026 - Hachaton</h1>
+            <h2>Despre Prove it</h2>
             <div class = "img_text_flex">
-                <div class = "img_container zoomable"></div>
+                <div class = "img_container zoomable" role = "img" aria-label = "Prove it poza"></div>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, eaque ipsam? Suscipit cum reprehenderit vitae in repudiandae minus at cupiditate fugiat impedit excepturi! Et eaque sed cumque optio maxime est!
                 </p>
@@ -96,59 +113,59 @@
         </div>
 
         <div class = "ce_trebuie_sa_stii animate-on-scroll">
-            <h1>Ce trebuie să știi?</h1>
+            <h2>Ce trebuie să știi?</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil, omnis esse excepturi unde accusantium adipisci itaque placeat nostrum, corporis dolor tempora? Vitae aliquid ipsam deserunt veritatis fugiat excepturi doloribus?
             </p>
         </div>
 
         <div class = "img_sliders">
-            <img src = "bg_elements/MouseV1.png" class = "bg_element" id = "mouse2">
-            <img src = "bg_elements/wifiV2.png" class = "bg_element" id = "wifi3">
-            <img src = "bg_elements/TVV1.png" class = "bg_element" id = "tv3">
+            <img src = "bg_elements/MouseV1.png" class = "bg_element" id = "mouse2" alt = "" loading = "lazy">
+            <img src = "bg_elements/wifiV2.png" class = "bg_element" id = "wifi3" alt = "" loading = "lazy">
+            <img src = "bg_elements/TVV1.png" class = "bg_element" id = "tv3" alt = "" loading = "lazy">
 
-            <h1>Poze din edițiile anterioare</h1>
+            <h2>Poze din edițiile anterioare</h2>
             <div class = "slider_right">
                 <div class = "img_right">
-                    <div class = "img_container_editii zoomable" id = "p1"></div>
-                    <div class = "img_container_editii zoomable" id = "p2"></div>
-                    <div class = "img_container_editii zoomable" id = "p3"></div>
-                    <div class = "img_container_editii zoomable" id = "p4"></div>
+                    <div class = "img_container_editii zoomable" id = "p1" role = "img" aria-label="Prove it - poza"></div>
+                    <div class = "img_container_editii zoomable" id = "p2" role = "img" aria-label="Prove it - poza"></div>
+                    <div class = "img_container_editii zoomable" id = "p3" role = "img" aria-label="Prove it - poza"></div>
+                    <div class = "img_container_editii zoomable" id = "p4" role = "img" aria-label="Prove it - poza"></div>
                 </div>
                 <div aria-hidden class = "img_right">
-                    <div class = "img_container_editii zoomable" id = "p1"></div>
-                    <div class = "img_container_editii zoomable" id = "p2"></div>
-                    <div class = "img_container_editii zoomable" id = "p3"></div>
-                    <div class = "img_container_editii zoomable" id = "p4"></div>
+                    <div class = "img_container_editii zoomable" id = "p1" role = "img" aria-label="Prove it - poza"></div>
+                    <div class = "img_container_editii zoomable" id = "p2" role = "img" aria-label="Prove it - poza"></div>
+                    <div class = "img_container_editii zoomable" id = "p3" role = "img" aria-label="Prove it - poza"></div>
+                    <div class = "img_container_editii zoomable" id = "p4" role = "img" aria-label="Prove it - poza"></div>
                 </div>
             </div>
             <div class = "slider_left">
                 <div class = "img_left">
-                    <div class = "img_container_editii zoomable" id = "p5"></div>
-                    <div class = "img_container_editii zoomable" id = "p6"></div>
-                    <div class = "img_container_editii zoomable" id = "p7"></div>
-                    <div class = "img_container_editii zoomable" id = "p8"></div>
+                    <div class = "img_container_editii zoomable" id = "p5" role = "img" aria-label="Prove it - poza"></div>
+                    <div class = "img_container_editii zoomable" id = "p6" role = "img" aria-label="Prove it - poza"></div>
+                    <div class = "img_container_editii zoomable" id = "p7" role = "img" aria-label="Prove it - poza"></div>
+                    <div class = "img_container_editii zoomable" id = "p8" role = "img" aria-label="Prove it - poza"></div>
                 </div>
                 <div aria-hidden class = "img_left">
-                    <div class = "img_container_editii zoomable" id = "p5"></div>
-                    <div class = "img_container_editii zoomable" id = "p6"></div>
-                    <div class = "img_container_editii zoomable" id = "p7"></div>
-                    <div class = "img_container_editii zoomable" id = "p8"></div>
+                    <div class = "img_container_editii zoomable" id = "p5" role = "img" aria-label="Prove it - poza"></div>
+                    <div class = "img_container_editii zoomable" id = "p6" role = "img" aria-label="Prove it - poza"></div>
+                    <div class = "img_container_editii zoomable" id = "p7" role = "img" aria-label="Prove it - poza"></div>
+                    <div class = "img_container_editii zoomable" id = "p8" role = "img" aria-label="Prove it - poza"></div>
                 </div>
             </div>
 
         </div>
 
         <div class = "testimoniale animate-on-scroll">
-            <img src = "bg_elements/CogV1.png" class = "bg_element" id = "cog1">
-            <img src = "bg_elements/SignalV1.png" class = "bg_element" id = "signal1">
+            <img src = "bg_elements/CogV1.png" class = "bg_element" id = "cog1" alt = "" loading = "lazy">
+            <img src = "bg_elements/SignalV1.png" class = "bg_element" id = "signal1" alt = "" loading = "lazy">
 
-            <h1>Testimoniale</h1>
+            <h2>Testimoniale</h2>
 
             <div class = "testimonial">
                 <div class = "testimoniale_img_nume">
 
-                    <div class = "pfp_t" id = "t1"></div>
+                    <div class = "pfp_t" id = "t1" role = "img" aria-label = "Poza testimonial Prove it"></div>
                     <div class = "nume_cine_t">
                         <p style = "font-weight: bold;">Nume prenume</p>
                         <p>Cine este</p>
@@ -165,7 +182,7 @@
             <div class = "testimonial">
                 <div class = "testimoniale_img_nume">
 
-                    <div class = "pfp_t" id = "t2"></div>
+                    <div class = "pfp_t" id = "t2" role = "img" aria-label = "Poza testimonial Prove it"></div>
                     <div class = "nume_cine_t">
                         <p style = "font-weight: bold;">Nume prenume</p>
                         <p>Cine este</p>
@@ -182,7 +199,7 @@
             <div class = "testimonial">
                 <div class = "testimoniale_img_nume">
 
-                    <div class = "pfp_t" id = "t3"></div>
+                    <div class = "pfp_t" id = "t3" role = "img" aria-label = "Poza testimonial Prove it"></div>
                     <div class = "nume_cine_t">
                         <p style = "font-weight: bold;">Nume prenume</p>
                         <p>Cine este</p>
@@ -199,39 +216,76 @@
     
         </div>
 
-        <div class = "cafeluta_poza_div">
-            <div class = "poza_cafeluta zoomable animate-on-scroll"></div>
-            <img src = "photos/cafeluta_dialog.png" class = "cafeluta_dialog">
+        <div class = "cafeluta_poza_div animate-on-scroll">
+            <div class = "carousel_flex">
+                <div class = "probe_carousel">
+                    <div class = "carousel_holder">
+                        <a class = "logo1" href = "https://www.tuiasi.ro" target = "_blank"></a>
+                        <a class = "logo2" href = "https://bestis.ro" target = "_blank"></a>
+                        <a class = "logo3" href = "https://proveit.bestis.ro" target = "_blank"></a>
+                    </div>
+                    <div class = "carousel_holder">
+                        <a class = "logo1" href = "https://www.tuiasi.ro" target = "_blank"></a>
+                        <a class = "logo2" href = "https://bestis.ro" target = "_blank"></a>
+                        <a class = "logo3" href = "https://proveit.bestis.ro" target = "_blank"></a>
+                    </div>
+                </div>
+                <div class = "probe_carousel">
+                    <div class = "carousel_holder">
+                        <a class = "logo2" href = "https://bestis.ro" target = "_blank"></a>
+                        <a class = "logo3" href = "https://proveit.bestis.ro" target = "_blank"></a>
+                        <a class = "logo1" href = "https://www.tuiasi.ro" target = "_blank"></a>
+                    </div>
+                    <div class = "carousel_holder">                  
+                        <a class = "logo2" href = "https://bestis.ro" target = "_blank"></a>
+                        <a class = "logo3" href = "https://proveit.bestis.ro" target = "_blank"></a>
+                        <a class = "logo1" href = "https://www.tuiasi.ro" target = "_blank"></a>
+                    </div>
+                </div>
+                <div class = "probe_carousel">
+                    <div class = "carousel_holder">
+                        <a class = "logo3" href = "https://proveit.bestis.ro" target = "_blank"></a>
+                        <a class = "logo1" href = "https://www.tuiasi.ro" target = "_blank"></a>
+                        <a class = "logo2" href = "https://bestis.ro" target = "_blank"></a>
+                    </div>
+                    <div class = "carousel_holder">
+                        <a class = "logo3" href = "https://proveit.bestis.ro" target = "_blank"></a>
+                        <a class = "logo1" href = "https://www.tuiasi.ro" target = "_blank"></a>
+                        <a class = "logo2" href = "https://bestis.ro" target = "_blank"></a>
+                    </div>
+                </div>
+             </div>
+            <img src = "photos/cafeluta_dialog.png" class = "cafeluta_dialog" alt = "cafeluta Prove It">
         </div>
         
-        <div class = "probe animate-on-scroll" id = "probe">
-            <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C7">
-            <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C8">
-            <img src = "bg_elements/bgShape_C.png" class = "bg_element" id = "C9">
+        <div class = "probe" id = "probe">
+            <img src = "bg_elements/bgShape_C.png" class = "bg_element invis_mobile" id = "C7" alt = "" loading = "lazy">
+            <img src = "bg_elements/bgShape_C.png" class = "bg_element invis_mobile" id = "C8" alt = "" loading = "lazy">
+            <img src = "bg_elements/bgShape_C.png" class = "bg_element invis_mobile" id = "C9" alt = "" loading = "lazy">
 
-            <h1>Probe</h1>
+            <h2>Probe</h2>
 
             <div class = "probe_carduri">
 
             <div class = "card_probe">
-                <h1>Proba 1</h1>
-                <div class = "img_container_probe" id = "pr1"></div>
+                <h2>Proba 1</h2>
+                <div class = "img_container_probe invis_mobile" id = "pr1" role = "img" aria-label = "Prove it proba 1"></div>
                 <div class = "detalii_probe">
                     <button>Detalii</button>
                 </div>
             </div>
 
              <div class = "card_probe">
-                <h1>Proba 2</h1>
-                <div class = "img_container_probe" id = "pr2"></div>
+                <h2>Proba 2</h2>
+                <div class = "img_container_probe invis_mobile" id = "pr2" role = "img" aria-label = "Prove it proba 2"></div>
                 <div class = "detalii_probe">
                     <button>Detalii</button>
                 </div>
             </div>
 
              <div class = "card_probe">
-                <h1>Proba 3</h1>
-                <div class = "img_container_probe" id = "pr3"></div>
+                <h2>Proba 3</h2>
+                <div class = "img_container_probe invis_mobile" id = "pr3" role = "img" aria-label = "Prove it proba 3"></div>
                 <div class = "detalii_probe">
                     <button>Detalii</button>
                 </div>
@@ -241,17 +295,17 @@
 
             <div class = "descrieri_container">
                 <div class = "descriere">
-                    <h1>Proba 1</h1>
+                    <h2>Proba 1</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, qui? Quos, similique iste voluptas praesentium omnis perspiciatis, veritatis fuga distinctio animi illum itaque saepe rem placeat molestiae provident culpa tempore?</p>
                 </div>
 
                 <div class = "descriere">
-                    <h1>Proba 2</h1>
+                    <h2>Proba 2</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, qui? Quos, similique iste voluptas praesentium omnis perspiciatis, veritatis fuga distinctio animi illum itaque saepe rem placeat molestiae provident culpa tempore?</p>
                 </div>
 
                 <div class = "descriere">
-                    <h1>Proba 3</h1>
+                    <h2>Proba 3</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, qui? Quos, similique iste voluptas praesentium omnis perspiciatis, veritatis fuga distinctio animi illum itaque saepe rem placeat molestiae provident culpa tempore?</p>
                 </div>
             </div>
@@ -259,141 +313,141 @@
         </div>
         
         <div class = "sponsori" id = "sponsori">
-            <img src = "bg_elements/MouseV1.png" class = "bg_element" id = "mouse3">
-            <img src = "bg_elements/Echer.png" class = "bg_element" id = "echer3">
+            <img src = "bg_elements/MouseV1.png" class = "bg_element" id = "mouse3" alt = "" loading = "lazy">
+            <img src = "bg_elements/Echer.png" class = "bg_element" id = "echer3" alt = "" loading = "lazy">
 
-            <h1>Sponsori</h1>
+            <h2>Sponsori</h2>
 
             <div class = "sponsori_row">
-                <div class = "img_container_sponsori"></div>
-                <div class = "img_container_sponsori"></div>
-                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
             </div>
 
              <div class = "sponsori_row">
-                <div class = "img_container_sponsori"></div>
-                <div class = "img_container_sponsori"></div>
-                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
             </div>
 
              <div class = "sponsori_row">
-                <div class = "img_container_sponsori"></div>
-                <div class = "img_container_sponsori"></div>
-                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
             </div>
             
         </div>
 
         <div class = "parteneri">
-            <img src = "bg_elements/TVV1.png" class = "bg_element" id = "tv4">
-            <img src = "bg_elements/wifiV2.png" class = "bg_element" id = "wifi4">
+            <img src = "bg_elements/TVV1.png" class = "bg_element" id = "tv4" alt = "" loading = "lazy">
+            <img src = "bg_elements/wifiV2.png" class = "bg_element" id = "wifi4" alt = "" loading = "lazy">
 
-            <h1>Parteneri anuali</h1>
+            <h2>Parteneri anuali</h2>
 
             <div class = "sponsori_row">
-                <div class = "img_container_sponsori"></div>
-                <div class = "img_container_sponsori"></div>
-                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
             </div>
 
              <div class = "sponsori_row">
-                <div class = "img_container_sponsori"></div>
-                <div class = "img_container_sponsori"></div>
-                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
             </div>
 
              <div class = "sponsori_row">
-                <div class = "img_container_sponsori"></div>
-                <div class = "img_container_sponsori"></div>
-                <div class = "img_container_sponsori"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
+                <div class = "img_container_sponsori" role = "img" aria-label = "Prove it sponsor"></div>
             </div>
             
         </div>
 
         <div class = "echipa" id = "echipa">
-            <img src = "bg_elements/ClickerV2.png" class = "bg_element" id = "clicker2">
-            <img src = "bg_elements/USBV3.png" class = "bg_element" id = "usb3">
+            <img src = "bg_elements/ClickerV2.png" class = "bg_element" id = "clicker2" alt = "" loading = "lazy">
+            <img src = "bg_elements/USBV3.png" class = "bg_element" id = "usb3" alt = "" loading = "lazy">
 
-            <h1>Echipa</h1>
+            <h2>Echipa</h2>
 
              <div class = "sponsori_row">
                 <div class = "poze_nume_echipa">
-                    <a href = "https://www.linkedin.com/in/teodora-cotovan-93a94a2a1/" target = "_blank" class = "img_container_sponsori" id = "teo"></a>
+                    <a href = "https://www.linkedin.com/in/teodora-cotovan-93a94a2a1/" target = "_blank" class = "img_container_sponsori" id = "teo" role = "img" aria-label = "Coordonatoare Prove it"></a>
                     <div class = "nume">
-                        <h1>Teodora Coțovan</h1>
-                        <h1>Coordonatoare</h1>
+                        <h2>Teodora Coțovan</h2>
+                        <h2>Coordonatoare</h2>
                     </div>
                 </div>
              </div>
 
-            <div class = "sponsori_row">
+            <div class = "sponsori_row carousel-row">
                 <div class = "poze_nume_echipa">
-                    <a href = "https://www.linkedin.com/in/paula-cătălina-albu-82386a35a/" target = "_blank" class = "img_container_sponsori" id = "cata"></a>
+                    <a href = "https://www.linkedin.com/in/paula-cătălina-albu-82386a35a/" target = "_blank" class = "img_container_sponsori" id = "cata" role = "img" aria-label = "FR Companii Prove it"></a>
                     <div class = "nume">
-                        <h1>Cătălina Albu</h1>
-                        <h1>FR Companii</h1>
+                        <h2>Cătălina Albu</h2>
+                        <h2>FR Companii</h2>
                     </div>
                 </div>
                 <div class = "poze_nume_echipa">
-                    <a href = "https://www.linkedin.com/in/florin-vintilă-5a550b335/" target = "_blank" class = "img_container_sponsori" id = "florin"></a>
+                    <a href = "https://www.linkedin.com/in/florin-vintilă-5a550b335/" target = "_blank" class = "img_container_sponsori" id = "florin" role = "img" aria-label = "FR Produse Prove it"></a>
                     <div class = "nume">
-                        <h1>Florin Vintilă</h1>
-                        <h1>FR Produse</h1>
+                        <h2>Florin Vintilă</h2>
+                        <h2>FR Produse</h2>
                     </div>
                 </div>
                 <div class = "poze_nume_echipa">
-                    <a href = "https://www.linkedin.com/in/ștefan-iulian-bujoreanu-5a8617354/" target = "_blank" class = "img_container_sponsori" id = "iulian"></a>
+                    <a href = "https://www.linkedin.com/in/ștefan-iulian-bujoreanu-5a8617354/" target = "_blank" class = "img_container_sponsori" id = "iulian" role = "img" aria-label = "Marketing Prove it"></a>
                     <div class = "nume">
-                        <h1>Iulian Bujoreanu</h1>
-                        <h1>Marketing</h1>
-                    </div>
-                </div>
-            </div>
-
-             <div class = "sponsori_row">
-                <div class = "poze_nume_echipa">
-                    <a href = "https://www.linkedin.com/in/mircea-nechita-baa713340/" target = "_blank" class = "img_container_sponsori" id = "mircea"></a>
-                    <div class = "nume">
-                        <h1>Mircea Nechita</h1>
-                        <h1>Design</h1>
-                    </div>
-                </div>
-                <div class = "poze_nume_echipa">
-                    <a href = "https://www.linkedin.com/in/elena-cezara-cozaru-881b47208/" target = "_blank" class = "img_container_sponsori" id = "cezara"></a>
-                    <div class = "nume">
-                        <h1>Cezara Cozaru</h1>
-                        <h1>Social Media</h1>
-                    </div>
-                </div>
-                <div class = "poze_nume_echipa">
-                    <a href = "https://www.linkedin.com/in/ivoncu-dennis-gabriel-14598138a/" target = "_blank" class = "img_container_sponsori" id = "dennis"></a>
-                    <div class = "nume">
-                        <h1>Dennis Ivoncu</h1>
-                        <h1>IT&Logistică</h1>
+                        <h2>Iulian Bujoreanu</h2>
+                        <h2>Marketing</h2>
                     </div>
                 </div>
             </div>
 
-             <div class = "sponsori_row">
+             <div class = "sponsori_row carousel-row">
                 <div class = "poze_nume_echipa">
-                    <a href = "https://www.linkedin.com/in/ionela-constantin-b37326389/" target = "_blank" class = "img_container_sponsori" id = "ionela"></a>
+                    <a href = "https://www.linkedin.com/in/mircea-nechita-baa713340/" target = "_blank" class = "img_container_sponsori" id = "mircea" role = "img" aria-label = "Design Prove it"></a>
                     <div class = "nume">
-                        <h1>Ionela Constantin</h1>
-                        <h1>Topicuri</h1>
+                        <h2>Mircea Nechita</h2>
+                        <h2>Design</h2>
                     </div>
                 </div>
                 <div class = "poze_nume_echipa">
-                    <a href = "https://www.linkedin.com/in/ancuta-ana-maria-flutur-9342a0394/" target = "_blank" class = "img_container_sponsori" id = "ancuta"></a>
+                    <a href = "https://www.linkedin.com/in/elena-cezara-cozaru-881b47208/" target = "_blank" class = "img_container_sponsori" id = "cezara" role = "img" aria-label = "Social Media Prove it"></a>
                     <div class = "nume">
-                        <h1>Ancuța Flutur</h1>
-                        <h1>Experience</h1>
+                        <h2>Cezara Cozaru</h2>
+                        <h2>Social Media</h2>
                     </div>
                 </div>
                 <div class = "poze_nume_echipa">
-                    <a href = "https://www.linkedin.com/in/george-matei-iordache-688638175/" target = "_blank" class = "img_container_sponsori" id = "matei"></a>
+                    <a href = "https://www.linkedin.com/in/ivoncu-dennis-gabriel-14598138a/" target = "_blank" class = "img_container_sponsori" id = "dennis" role = "img" aria-label = "IT Prove it"></a>
                     <div class = "nume">
-                        <h1>Matei Iordache</h1>
-                        <h1>HR</h1>
+                        <h2>Dennis Ivoncu</h2>
+                        <h2>IT&Logistică</h2>
+                    </div>
+                </div>
+            </div>
+
+             <div class = "sponsori_row carousel-row">
+                <div class = "poze_nume_echipa">
+                    <a href = "https://www.linkedin.com/in/ionela-constantin-b37326389/" target = "_blank" class = "img_container_sponsori" id = "ionela" role = "img" aria-label = "Topicuri Prove it"></a>
+                    <div class = "nume">
+                        <h2>Ionela Constantin</h2>
+                        <h2>Topicuri</h2>
+                    </div>
+                </div>
+                <div class = "poze_nume_echipa">
+                    <a href = "https://www.linkedin.com/in/ancuta-ana-maria-flutur-9342a0394/" target = "_blank" class = "img_container_sponsori" id = "ancuta" role = "img" aria-label = "Experience Prove it"></a>
+                    <div class = "nume">
+                        <h2>Ancuța Flutur</h2>
+                        <h2>Experience</h2>
+                    </div>
+                </div>
+                <div class = "poze_nume_echipa">
+                    <a href = "https://www.linkedin.com/in/george-matei-iordache-688638175/" target = "_blank" class = "img_container_sponsori" id = "matei" role = "img" aria-label = "Human Resources Prove it"></a>
+                    <div class = "nume">
+                        <h2>Matei Iordache</h2>
+                        <h2>HR</h2>
                     </div>
                 </div>
             </div>
@@ -405,44 +459,45 @@
         <footer class = "footer">
             <div class = "tuiasi">
                 <p>Eveniment realizat cu sprijinul</p>
-                <a href = "https://www.tuiasi.ro" target = "_blank"><img src = "logo/tuiasi.png" id = "logo_tuiasi"></a>
+                <a href = "https://www.tuiasi.ro" target = "_blank"><img src = "logo/tuiasi.png" id = "logo_tuiasi" alt = "TUIASI"></a>
                 <p>Universitatea Tehnică</p>
                 <p>„Gheorghe Asachi” din Iași</p>
             </div>
 
-            <a href = "https://bestis.ro" target = "_blank"><img src = "logo/Sigla BEST alba.png" class = "sigla_BEST"></a>
+            <a href = "https://bestis.ro" target = "_blank"><img src = "logo/Sigla BEST alba.png" class = "sigla_BEST" alt = "BEST Iasi"></a>
 
             <div class = "contact" id = "contact">
                 <h2>Contact</h2>
 
                 <div class = "locatie">
-                    <img src = "logo/Location_site.png" id = "footer_img">
-                    <p>Campus Tudor Vladimirescu cămin T19 camera 16A</p>
+                    <img src = "logo/Location_site.png" id = "footer_img" alt = "">
+                    <p>Campus Tudor Vladimirescu, cămin T19, camera 16A</p>
                 </div>
 
                 <div class = "tel_mail">
                     <div class = "tel">
-                        <img src = "logo/Phone_site.png" id = "footer_img">
+                        <img src = "logo/Phone_site.png" id = "footer_img" alt = "">
                         <p>+40 754 665 038</p>
                     </div>
 
                     <div class = "mail">
-                        <img src = "logo/Mail_site.png" id = "footer_img">
+                        <img src = "logo/Mail_site.png" id = "footer_img" alt = "">
                         <p>contact@bestis.ro</p>
                     </div>
                 </div>
 
                 <div class = "sm_icons">
-                    <a href = "https://www.instagram.com/bestiasi/" target = "_blank"><img src = "logo/Instagram_site.png"></a>
-                    <a href = "https://www.facebook.com/bestiasi" target = "_blank"><img src = "logo/Facebook_site.png"></a>
-                    <a href = "https://www.youtube.com/@BESTIasi" target = "_blank" style = "margin-right: 1%;"><img src = "logo/YouTube_site.png"></a>
-                    <a href = "https://www.linkedin.com/company/best-iasi/posts/?feedView=all" target = "_blank"><img src = "logo/LinkedIn_site.png"></a>
-                    <a href = "https://www.tiktok.com/@best.iasi" target = "_blank"><img src = "logo/TikTok_site.png"></a>
+                    <a href = "https://www.instagram.com/bestiasi/" target = "_blank"><img src = "logo/Instagram_site.png" alt = "Instagram"></a>
+                    <a href = "https://www.facebook.com/bestiasi" target = "_blank"><img src = "logo/Facebook_site.png" alt = "Facebook"></a>
+                    <a href = "https://www.youtube.com/@BESTIasi" target = "_blank" style = "margin-right: 1%;"><img src = "logo/YouTube_site.png" alt = "Youtube"></a>
+                    <a href = "https://www.linkedin.com/company/best-iasi/posts/?feedView=all" target = "_blank"><img src = "logo/LinkedIn_site.png" alt = "LinkedIn"></a>
+                    <a href = "https://www.tiktok.com/@best.iasi" target = "_blank"><img src = "logo/TikTok_site.png" alt = "TikTok"></a>
                 </div>
 
             </div>
         </footer>
     </section>
+</main>
 
     <div id="lightbox" class="lightbox">
         <span class="close-btn">&times;</span>

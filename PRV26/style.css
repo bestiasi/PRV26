@@ -3,6 +3,13 @@
     src: url('fonts/Sarpanch-Regular.woff') format('woff');
 }
 
+#scroll-trigger{
+    position: absolute;
+    top: 100vh;
+    height: 1px;
+    width: 100%;
+}
+
 .zoomable{
     transition: 0.3s ease-in-out;
 }
@@ -21,6 +28,434 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+/*bg css*/
+
+.bg_element{
+    position: absolute;
+    z-index: 1;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.dirty_surface{
+    position: absolute;
+    z-index: -3;
+    opacity: 0.4;
+    width: 100vw;
+    max-height: 100vh;
+}
+
+/* .grid_lp{
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    min-height: 100vh;
+    opacity: 0.2;
+} */
+
+/* .grid_website{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.7;
+} */
+
+.logo_lp{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    scale: 0.95;
+    width: 47vw;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* landing page */
+#D1{
+    bottom: -100px;
+    left: -100px;
+    width: 27.5vw;
+}
+
+#D2{
+    transform: rotate(-87.44deg);
+    right: 10px;
+    top: 10px;
+    width: 27.5vw;
+}
+
+#C1{
+    transform: rotate(28.64deg);
+    left: -20px;
+    top: -10px;
+    width: 27.5vw;
+}
+
+#C2{
+    transform: rotate(37.16deg);
+    right: -10px;
+    bottom: -40px;
+    width: 27.5vw;
+}
+
+#echer1{
+    transform: rotate(74.69deg);
+    width: 7vw;
+    top: -15px;
+}
+
+#mouse1{
+    transform: rotate(-31.13deg);
+    top: 50%;
+    width: 7vw;
+}
+
+#tv1{
+    transform: rotate(30.5deg);
+    top: 32%;
+    left: 18%;
+    width: 7vw;
+}
+
+#wifi1{
+    transform: rotate(23.61deg);
+    top: 42%;
+    right: 20%;
+    width: 7vw;
+}
+
+#usb1{
+    transform: rotate(-56.9deg);
+    right: 3%;
+    top: 140px;
+    width: 7vw;
+}
+
+#building1{
+    transform: rotate(-25.54deg);
+    bottom: 0;
+    right: 2%;
+    width: 7vw;
+}
+
+/* landing page */
+/* main page */
+
+#usb2{
+    transform: rotate(-56.9deg);
+    right: 8vw;
+    top: 10vh;
+    width: 20vw;
+}
+
+#bluetooth1{
+    transform: rotate(19.86deg);
+    top: 10vh;
+    left: 10vw;
+    width: 10vw;
+}
+
+#tv2{
+    transform: rotate(-8.91deg);
+    left: 45vw;
+    top: 15vh;
+    width: 7vw;
+}
+
+#wifi2{
+    transform: rotate(-24.01deg);
+    bottom: -12.5vh;
+    left: -7vw;
+    width: 7vw;
+}
+
+#echer2{
+    transform: rotate(66.19deg);
+    bottom: -10vh;
+    right: -7vw;
+    width: 7vw;
+}
+
+#clicker1{
+    transform: rotate(-25.54deg);
+    bottom: -20vh;
+    width: 5vw;
+}
+
+#pencil1{
+    transform: rotate(16.17deg);
+    width: 7vw;
+    right: -24vw;
+    bottom: -30vh;
+}
+
+#D3{
+    transform: rotate(46.74deg);
+    top: 35vh;
+    left: -250px;
+    width: 27.5vw;
+}
+
+#C3{
+    transform: rotate(22.36deg);
+    top: 40vh;
+    right: -160px;
+    width: 27.5vw;
+}
+
+#C4{
+    z-index: -1;
+    transform: rotate(137.8deg);
+    top: -30vh;
+    left: -3vw;
+    width: 35vw;
+}
+
+#C5{
+    z-index: -1;
+    transform: rotate(-13.7deg);
+    bottom: -35vh;
+    left: -2vw;
+    width: 35vw;
+}
+
+#wrench1{
+    transform: rotate(17.8deg);
+    bottom: -25vh;
+    width: 7vw;
+}
+
+#floppy1{
+    transform: rotate(-120.39deg);
+    bottom: -30vh;
+    right: 7vw;
+    width: 15vw;
+}
+
+#mouse2{
+    transform: rotate(-31.13deg);
+    top: -24vh;
+    left: 3vw;
+    width: 9vw;
+}
+
+#tv3{
+    transform: rotate(30.5deg);
+    top: -24vh;
+    right: 3vw;
+    width: 7vw;
+}
+
+#wifi3{
+    transform: rotate(-23.76deg);
+    top: -27vh;
+    left: 50vw;
+    width: 5vw;
+}
+
+#cog1{
+    width: 9vw;
+    top: -25vh;
+    left: 6vw;
+}
+
+#signal1{
+    width: 7vw;
+    top: -19vh;
+    right: 6vw;
+    transform: rotate(30.4deg);
+}
+
+#C6{
+    width: 27.5vw;
+    right: -7vw;
+    bottom:52.5vh;
+    transform: rotate(36.56deg);
+}
+
+#D4{
+    width: 27.5vw;
+    left: -7vw;
+    bottom:50vh;
+    transform: rotate(-87.44deg);
+}
+
+#clicker2{
+    width: 9vw;
+    top: 10vw;
+    left: 15vw;
+    transform: rotate(20.71deg);
+}
+
+#usb3{
+    width: 10vw;
+    top: 6vw;
+    right: 13vw;
+    transform: rotate(-57deg);
+}
+
+#tv4{
+    transform: rotate(-48.5deg);
+    top: 5vh;
+    width: 6vw;
+    left: 10vw;
+}
+
+#wifi4{
+    transform: rotate(36.67deg);
+    top: 0vh;
+    width: 6vw;
+    right: 9vw;
+}
+
+#mouse3{
+    transform: rotate(-31.13deg);
+    top: 0;
+    width: 6vw;
+    right: 8vw;
+}
+
+#echer3{
+    transform: rotate(74.7deg);
+    top: -5vh;
+    width: 10vw;
+    left: 10vw;
+}
+
+#C7{
+    z-index: -1;
+    left: 0;
+    width: 40vw;
+    transform: rotate(-100.27deg);
+    top: calc(50px + 2rem + 20vh);
+}
+
+#C8{
+    z-index: -1;
+    width: 40vw;
+    transform: translateX(3%) rotate(100.31deg);
+    top: calc(50px + 2rem + 8.7vh)    ;
+}
+
+#C9{
+    z-index: -1;
+    right: -5vw;
+    width: 40vw;
+    transform: rotate(-104.18deg);
+    top: calc(50px + 2rem + 20vh);
+}
+
+/* main page */
+
+#p1{
+    background: url(photos/photo1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p2{
+    background: url(photos/photo2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p3{
+    background: url(photos/photo3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p4{
+    background: url(photos/photo4.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p5{
+    background: url(photos/photo5.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p6{
+    background: url(photos/photo6.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p7{
+    background: url(photos/photo7.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#p8{
+    background: url(photos/photo8.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#t1{
+    background: url(photos/testimonial1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#t2{
+    background: url(photos/testimonial2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#t3{
+    background: url(photos/testimonial3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#pr1{
+    background: url(photos/proba1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#pr2{
+    background: url(photos/proba2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#pr3{
+    background: url(photos/proba3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/*bg css*/
+/*style css*/
 
 html{
     overflow: visible;
@@ -48,7 +483,7 @@ body {
     overflow: visible;
 }
 
-body::before{
+/* body::before{
     content: "";
     background: url(backgrounds/Website_Grid.svg);
 
@@ -60,9 +495,49 @@ body::before{
     height: 100%;
     z-index: -5;
     pointer-events: none;
+} */
+
+/* In style.css */
+body::before {
+    content: "";
+    background: url(backgrounds/Website_grid_min.svg);
+    background-size: cover;
+    
+    /* CHANGED: Use fixed to pin it to the screen, not the page */
+    position: fixed; 
+    
+    /* CHANGED: limit height to the screen height */
+    height: 100vh;   
+    
+    /* Keep these */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -5;
+    pointer-events: none;
+    
+    /* OPTIONAL: Hardware acceleration to reduce lag */
+    transform: translateZ(0); 
+    will-change: transform;
 }
 
-h1{
+/* Add this to style.css */
+
+body::after {
+    content: "";
+    background-image: url('backgrounds/Dirty-Surface-Texture-08-min.jpg');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover; 
+    opacity: 0.4;
+    z-index: -4;
+    pointer-events: none;
+}
+
+h2{
     font-family: "Sarpanch", Arial, Helvetica, sans-serif;
     font-size: clamp(0.6rem, 3vw, 4rem);
 }
@@ -106,29 +581,6 @@ h1{
     top: 70vh;
 }
 
-#c2a_button{
-    border-style: solid;
-    border-width: 5px;
-    /* border-color: #9117a1; */
-    color: rgb(200, 200, 200);
-    padding: 0.6rem 1.6rem;
-    font-size: clamp(0.6rem, 2vw, 2rem);
-    border-radius: 50px;
-    font-weight: bold;
-    background-color: #A91DBC;
-    cursor: pointer;
-    transition-duration: 0.3s;
-    user-select: none;
-}
-
-#c2a_button:hover{
-    background-color: #a91dbce5;
-}
-
-#c2a_button:active{
-    background-color: #a91dbcbc;
-}
-
 .header{
     border-style: solid;
     position: fixed;
@@ -155,10 +607,6 @@ h1{
     transition: 0.7s ease-in-out;
 
     user-select: none;
-}
-
-.is_visible{
-    opacity: 1;
 }
 
 .header_links{
@@ -201,7 +649,7 @@ h1{
 
 #logo_header{
     flex: 1;
-    max-width: 100%;
+    width: 100%;
     transition: 0.2s ease-in-out;
 }
 
@@ -245,8 +693,8 @@ h1{
 .info_PRV{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 60vw;
-    height: 40vh;
+    width: 55vw;
+    height: 30vh;
     /* border-style: solid;
     border-color: aqua; */
 }
@@ -267,6 +715,47 @@ h1{
 
 .data, .locatie{
     font-size: 2vw;
+    align-items: flex-start !important;
+}
+
+#c2a_button {
+    /* Shape & Cleaner Look */
+    border: none;                  /* Removed solid border for a cleaner look */
+    border-radius: 50px;
+    padding: 0.8rem 2.2rem;        /* Slightly wider for a modern shape */
+    
+    /* Typography */
+    font-family: inherit;          /* Ensures it matches your site font */
+    font-size: clamp(0.8rem, 2.5vw, 4rem); 
+    font-weight: bold;             
+    color: #ffffff;                /* Pure white pops better than gray */
+    text-transform: uppercase;     /* Makes it look like a "call to action" */
+    letter-spacing: 1px;           /* Adds elegance */
+
+    /* Color & Glow */
+    background-color: #A91DBC;
+    box-shadow: 0 0 15px rgb(169, 29, 188); /* Soft initial glow */
+    
+    /* Interactions */
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother bounce */
+    transform: translateY(0);
+}
+
+/* Hover State: "Power Up" Effect */
+#c2a_button:hover {
+    background-color: #be2dd1;     /* Slightly lighter/brighter purple */
+    box-shadow: 0 0 30px rgba(169, 29, 188, 0.7), /* Strong outer glow */
+                0 0 10px rgba(255, 255, 255, 0.2) inset; /* Inner shine */
+    transform: translateY(-3px) scale(1.02); /* Lifts up slightly */
+}
+
+/* Active State: Click Feedback */
+#c2a_button:active {
+    transform: translateY(1px) scale(0.98); /* Presses down */
+    box-shadow: 0 0 10px rgba(169, 29, 188, 0.5);
+    background-color: #9016a1;
 }
 
 .despre_PRV{
@@ -284,7 +773,7 @@ h1{
 .img_text_flex{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 .img_text_flex p{
@@ -296,16 +785,17 @@ h1{
     -webkit-box-decoration-break: clone;
     border-radius: 25px;
     font-size: clamp(0.6rem, 1.5vw, 2rem);
+    margin-right:2.5vw;
 }
 
 .img_container{
     position: relative;
-    display: inline-block;
+    display: flex;
     background-color: white;
     border-radius: 40px;
     flex: 3;
     height: 50vh;
-    margin-left: 1vw;
+    margin-left: 2.5vw;
 
     background: url(photos/despre_prv.jpg);
     background-position: center;
@@ -326,6 +816,7 @@ h1{
 }
 
 .ce_trebuie_sa_stii p{
+    width: 95vw;
     font-size: clamp(0.6rem, 1.5vw, 2rem);
     display: inline;
     padding: 1rem 2rem;
@@ -372,7 +863,7 @@ h1{
     z-index: -1;
 } */
 
-.img_sliders h1{
+.img_sliders h2{
     text-align: center;
 }
 
@@ -431,9 +922,9 @@ h1{
     transition: opacity 0.6s ease-in-out;
     
     width: 100%;
-    border-radius: 20px;
-    padding: 20px;
     display: block !important; 
+
+    /* border: solid white; */
 }
 
 .testimoniale {
@@ -462,13 +953,13 @@ h1{
     opacity: 1;
 }
 
-/* .testimoniale h1{
+/* .testimoniale h2{
     text-align: center;
     font-size: clamp(0.6rem, 3vw, 4rem);
     margin-bottom: 20px;
 } */
 
-.testimoniale h1 {
+.testimoniale h2 {
     grid-area: stack;
     align-self: start;
     transform: translateY(-80px);
@@ -544,29 +1035,89 @@ h1{
     display: flex;
     align-items: center;
     position: relative;
+    /* opacity: 0; */
     width: 100%;
     height: 100vh;
     /* border: solid white; */
     margin-top: 10vh;
 }
 
-.poza_cafeluta{
+.cafeluta_dialog{
     position: absolute;
-    width: 45vw;
-    height: 60vh;
-    background-color: white;
-    border-radius: 30px;
-    left: 7vw;
-    top: 20vh;
+    z-index: 5;
+    right: -15vw;
+    width: 50vw;
+    /* opacity: 0; */
+    transition: 0.7s ease-in-out;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 
-    background: url(photos/cafeluta_poza.jpg);
-    background-position: center;
-    background-size: cover;
+.carousel_flex{
+    display: flex;
+    position: absolute;
+    height: 15vw;
+    background-color: rgba(0, 0, 0, 0.621);
+    border-radius: 50px;
+    left: 10vw;
+    top: 40vh;
+    z-index: 90;
+    gap: 3vw;
+}
+
+.probe_carousel{
+    /* width: 30vw; */
+    overflow: hidden;
+
     transition: 0.3s ease-in-out;
 }
 
-.poza_cafeluta:hover{
-    scale: 1.02;
+.carousel_holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vw;
+    padding-bottom: 10vw;
+    animation: spin_down 6s infinite linear;
+}
+
+.carousel_holder a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 5vw;
+    flex-grow: 0;
+    flex-shrink: 0;
+    transition: 0.3s ease-in-out
+}
+
+.carousel_holder a:hover{
+    scale: 1.03;
+}
+
+.logo1{
+    background: url(logo/tuiasi.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.logo2{
+    background: url(logo/Sigla\ BEST\ alba.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.logo3{
+    background: url(logo/Sigla\ Postari.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .probe{
@@ -581,12 +1132,13 @@ h1{
 .probe_carduri{
     margin-top: 50px;
     display: flex;
-    min-width: 100%;
+    width: 100%;
     justify-content: space-around;
 }
 
-.probe_carduri h1{
+.probe_carduri h2{
     font-weight: normal;
+    margin-bottom: 2vh;
 }
 
 .card_probe{
@@ -611,7 +1163,7 @@ h1{
     align-items: center;
     justify-content: center;
     width: 100%;
-    flex: 1;
+    /* flex: 1; */
     border-radius: 0px 0px 20px 20px;
 }
 
@@ -624,6 +1176,7 @@ h1{
     padding: 0.6rem 1.6rem;
     transition-duration: 0.3s;
     user-select: none;
+    margin: 2rem 0;
 }
 
 .detalii_probe button:hover{
@@ -639,7 +1192,7 @@ h1{
     display: grid;
     grid-template-areas: "stack";
     width: 100%;
-    margin-top: 50px;
+    margin-top: 60px;
     justify-items: center;
 }
 
@@ -691,7 +1244,7 @@ h1{
     background-color: rgba(0, 0, 0, 0.628); 
 }
 
-.sponsori h1, .parteneri h1, .echipa h1{
+.sponsori h2, .parteneri h2, .echipa h2{
     font-size: clamp(0.8rem, 5vw, 6rem);
 }
 
@@ -738,6 +1291,10 @@ h1{
     transition: 0.3s ease-in-out;
 }
 
+.echipa .img_container_sponsori{
+    border: solid #A91DBC;
+}
+
 .img_container_sponsori:hover{
     scale: 1.02;
 }
@@ -750,7 +1307,7 @@ h1{
     margin-bottom: 10vh;
 }
 
-.sponsori_row h1{
+.sponsori_row h2{
     font-family: "Montserrat", sans-serif;
     margin-top: 10px;
     font-size: clamp(0.5rem, 1.4vw, 2rem);
@@ -847,9 +1404,9 @@ h1{
     position: relative;
     z-index: 5;
     width: 100%;
-    height: 80vh;
-    background-color: #181515;
-    border-top: solid black;
+    height: 70vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.511) 10%, black 20%);
+    /* border-top: solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -858,9 +1415,14 @@ h1{
 .sigla_BEST{
     position: absolute;
     right: 75px;
-    top: 15vh;
+    top: 30vh;
     width: 20%;
     transition: 0.3s ease-in-out;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .sigla_BEST:hover{
@@ -875,8 +1437,8 @@ h1{
     justify-content: center;
     width: 20%;
     left: 75px;
-    top: calc(50px - 1.2rem);
-    top: 15vh;
+    top: 27.5vh;
+    
 }
 
 .tuiasi p{
@@ -887,6 +1449,11 @@ h1{
 #logo_tuiasi{
     width: 100%;
     transition: 0.3s ease-in-out;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 #logo_tuiasi:hover{
@@ -902,7 +1469,7 @@ h1{
     justify-content: center;
     gap: 10px;  
     width: 40%;
-    bottom: 10vh;
+    top: 32.0vh;
 }
 
 .contact p{
@@ -941,20 +1508,32 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     width: 100%;
+    margin-top: 5px;
 }
 
 .sm_icons a{
     width: 6.7%;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .sm_icons img{
     width: 100%;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 #footer_img{
     width: clamp(0.5rem, 1.3vw, 2rem);
+    
 }
 
 .contact img{
@@ -1018,6 +1597,33 @@ h1{
     z-index: 10000;
 }
 
+.is_visible{
+    opacity: 1;
+}
+
+.hamburger{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 101;
+    padding: 10px;
+    margin-right: 5vw;
+    gap: 5px;
+}
+
+.hamburger .bar{
+    display: block;
+    width: 10vw;
+    height: 3px;
+    background-color: white;
+    border-radius: 20%;
+    transition: 0.3s ease-in-out
+
+}
+
 /* animations */
 @keyframes arrow_animation1{
     50%{
@@ -1056,4 +1662,539 @@ h1{
     from {translate: -100%;}
     to {translate: 0;}
 }
+
+@keyframes spin_up{
+    from {transform: translateY(0);}
+    to {transform: translateY(-100%)}
+}
+
+@keyframes spin_down{
+    from {transform: translateY(-100%);}
+    to {transform: translateY(0)}
+}
 /* animations */
+/*style css*/
+
+/*mobile css*/
+@media screen and (max-width: 768px){
+
+    #C1{
+        width: 50vw;
+        top: 70vh;
+        left: 77vw;
+        transform: rotate(-37.16deg);
+    }
+
+    #C2{
+        width: 50vw;
+        top: -3vh;
+        left: -7vw;
+    }
+
+    #D1{
+        transform: scaleX(-1) rotate(-92.56deg);
+        width: 50vw;
+        top: 64vh;
+        left: -10vw;
+    }
+
+    #D2{
+        width: 56vw;
+        top: 10vh;
+        right: -30px;
+    }
+
+    #usb1{
+        transform: rotate(-66.92deg);
+        width: 13vw;
+        top: 3vh;
+        right: 10vw;
+    }
+
+    #building1{
+        width: 13vw;
+        top: 32vh;
+        right: 30vw;
+    }
+
+    #wifi1{
+        width: 13vw;
+        top: 29vh;
+        left: 20vw;
+    }
+
+    #tv1{
+        width: 13vw;
+        top: 63vh;
+        left: 63vw;
+    }
+
+    #mouse1{
+        width: 13vw;
+        top: 90vh;
+        right: 14vw;
+    }
+
+    #echer1{
+        width: 13vw;
+        top: 90vh;
+        left: 15vw;
+    }
+
+    .c2a{
+        top: 75vh;
+    }
+
+    #arrows_img{
+        width: 30vw;
+    }
+
+    /* main page */
+
+    #C4{
+        transform: rotate(-84.09deg);
+        width: 60vw;
+        top: 33vh;
+        left: -15vw;
+    }
+
+    #C5{
+        transform: rotate(-133.4deg);
+        width: 60vw;
+        top: 35vh;
+        left: 50vw;
+    }
+
+    #wrench1{
+        width: 5vh;
+        top: -4vh;
+        left: 3vw;
+    }
+
+    #floppy1{
+        width: 5vh;
+        right: 1vw;
+        top: -6vh;
+    }
+
+    #mouse2{
+        width: 13vw;
+        top: -6vh;
+    }
+
+    #wifi3{
+        width: 10vw;
+        top: -6.7vh;
+    }
+
+    #tv3{
+        width: 13vw;
+        top: -6.5vh;
+    }
+
+    #cog1{
+        width: 13vw;
+        top: -16vh;
+    }
+
+    #signal1{
+        width: 13vw;
+        top: -17vh;
+    }
+
+    #mouse3{
+        width: 8vh;
+        top: -8.5vh;
+    }
+
+    #echer3{
+        width: 8vh;
+        top: -8vh;
+    }
+
+    #tv4{
+        width: 6.7vh;
+        top: -8vh;
+    }
+
+    #wifi4{
+        width: 6.7vh;
+        top: -8vh;
+    }
+
+    #clicker2{
+        width: 6.7vh;
+        top: -8vh;
+    }
+
+    #usb3{
+        width: 6.7vh;
+        top: -8vh;
+    }
+
+    *{
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    body::before{
+        background-size: 200%;
+        background-position: center top;
+    }
+
+    .invis_mobile{
+        display: none;
+    }
+    
+    #scroll-trigger{
+        top: 75vh;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .main_page{
+        padding-top: 0;
+    }
+
+    .header{
+        height: 10vh;
+    }
+
+    .hamburger{
+        display: flex;
+        margin-left: auto;
+        user-select: none;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #logo_header{
+        flex: 1;
+        width: 30vw;
+    }
+
+    .header_links{
+        opacity: 0;
+        right: 0;
+        flex-direction: column;
+        position: fixed;
+        top: -500%;
+        height: 60vh;
+        width: 100%;
+        background-color: black;
+        margin: 0;
+        border-radius: 0 0 10px 10px;
+        font-size: 2rem;
+        transition: 0.5s ease-in-out;
+        padding-top: calc(10vh + 1rem);
+        padding-bottom: 1rem;
+        padding-left: 0;
+        padding-right: 0;
+        border: solid white;
+        z-index: -1;
+        border-top: none;
+    }
+
+    .header_links.active{
+        top: 0vh;
+        opacity: 1;
+    }
+
+    .timer_div{
+        margin-top: 0;
+        width: 95vw;
+        gap: 2vh;
+    }
+
+    #timer{
+        font-size: 15vw;
+    }
+
+    .cand, .unde{
+        font-size: 8vw;
+    }
+
+    .data, .locatie{
+        font-size: 6.7vw;
+    }
+
+    .info_PRV{
+        width: 100vw;
+        height: 20vh;
+        /* border: solid white; */
+    }
+
+    .timer_div #c2a_button{
+        width: 80vw;
+    }
+
+    #c2a_button{
+        font-size: 7vw;
+    }
+
+    .despre_PRV{
+        margin-top: 7vh;
+        gap: 3vh;
+    }
+
+    .img_text_flex{
+        flex-direction: column-reverse;
+        gap: 2vh;
+        justify-content: center;
+    }
+
+    .img_text_flex p{
+        font-size: 1rem;
+        text-align: center;
+        padding: 1.5rem 0.5rem;
+        width: 90vw;
+    }
+
+    .img_container{
+        width: 90vw;
+        height: 30vh;
+        margin-left: 0;
+        flex: none;
+        border-radius: 20px;
+    }
+
+    .ce_trebuie_sa_stii{
+        margin-top: 10vh;
+        gap: 2vh;
+    }
+
+    .ce_trebuie_sa_stii p{
+        font-size: 1rem;
+        text-align: center;
+        padding: 1.5rem 0.5rem;
+        width: 90vw;
+    }
+
+    .img_sliders{
+        margin-top: 10vh;
+        gap: 2vh;
+    }
+
+    .img_container_editii{
+        height: 17vh;
+        flex: 0 0 60vw;
+    }
+
+    .img_left{
+        margin-bottom: 0;
+    }
+
+    .testimoniale{
+        margin-top: 20vh;
+        width: 92vw;
+    }
+
+    .testimoniale h2{
+        font-size: 2rem;
+    }
+
+    .testimoniale_img_nume{
+        margin-left: 3rem;
+    }
+
+    .pfp_t{
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .nume_cine_t{
+        font-size: 0.8rem;
+    }
+
+    .buttons_paragraph p{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    #slider_button{
+        font-size: 3rem;
+    }
+
+    .cafeluta_poza_div{
+        height: 60vh;
+        margin-top: 0;
+    }
+
+    .cafeluta_dialog{
+        width: 100%;
+        right: -30vw;
+    }
+
+    .carousel_flex{
+        top: 45vh;
+        width: 60vw;
+        height: 20vw;
+        left: 15vw;
+        border-radius: 10px;;
+        gap: 7vw;
+    }
+
+    .carousel_holder{
+        gap: 7vh;
+        padding-bottom: 7vh;
+    }
+
+    .carousel_holder a{
+        width: 15vw;
+        height: 10vw;
+    }
+
+    #C7{
+        width: 120vw;
+        top: 5vh;
+    }
+
+    #C8{
+        width: 100vw;
+        top: 45vh;
+        transform: rotate(0)
+    }
+
+    #C9{
+        width: 110vw;
+        top: 75vh;
+        transform: scaleX(-1);
+    }
+
+    .probe_carduri{
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
+        border-radius: 30px;
+        gap: 5vh;
+        padding: 5vh 0;
+        margin-top: 2vh;
+
+        background-color: rgba(0, 0, 0, 0.105);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(3.9px);
+        -webkit-backdrop-filter: blur(3.9px);
+
+        transform: translateZ(0);
+        will-change: opacity, transform;
+    }
+
+    .card_probe{
+        height: auto;
+        width: auto;
+        background-color: black;
+        padding: 4vh 10vw;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.212);
+    }
+
+    .detalii_probe{
+        padding-top:4vh;
+    }
+
+    .detalii_probe button{
+        font-size: clamp(1rem, 7vw, 2rem);
+    }
+
+    .descrieri_container{
+        margin-top: 2vh;
+    }
+
+    .descriere p{
+        margin: 1rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .sponsori h2, .parteneri h2, .echipa h2{
+        font-size: clamp(1.2rem, 10vw, 2.3rem);
+    }
+
+    .sponsori, .parteneri, .echipa{
+        margin-top: 10vh;
+        padding: 0;
+    }
+
+    .sponsori .sponsori_row{
+        flex-wrap: wrap-reverse;
+        row-gap: 40px;
+    }
+
+    .parteneri .sponsori_row{
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+
+    .echipa .sponsori_row{
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+
+    .echipa .img_container_sponsori{
+        width: 80vw;
+        height: 75vw;
+    }
+
+    .echipa .nume{
+        width: 80vw;
+    }
+
+    .img_container_sponsori{
+        height: 20vh;
+        width: 22vh;
+    }
+
+    .sponsori_row h2{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .footer{
+        height: 65vh;
+        margin-top: 3vh;
+    }
+
+    .tuiasi{
+        width: 40%;
+        top: auto;
+        bottom: 5vh;
+        left: 20px;
+    }
+
+    .sigla_BEST{
+        width: 40%;
+        top: auto;
+        bottom: calc(5vh + 2rem);
+        right: 20px;
+    }
+
+    .contact{
+        bottom: auto;
+        top: 12vh;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .contact p{
+        font-size: clamp(0.5rem, 3.2vw, 1rem);
+    }
+
+    #footer_img{
+            width: clamp(0.5rem, 3.2vw, 1rem);
+    }
+
+    .logo_lp{
+        width: 100vw;
+        scale: 1;
+    }
+}

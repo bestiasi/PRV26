@@ -1,226 +1,204 @@
-
-//timer
-const timer = document.getElementById("timer")
-
-let Id = setInterval(UpdateTimer, 1000);
-
-function UpdateTimer(){
-    let now = new Date();
-    let PRV = new Date("March 30, 2026 00:00:00");
-    let duration = (PRV - now) / 1000;
-
-    if(duration <= 0)
-    {
-        clearInterval(Id);
-        timer.textContent = `00:00:00:00`;
-        return;
-    }
-
-    let days = Math.floor(duration / 60 / 60 / 24);
-    let hours = Math.floor(duration / 60 / 60) % 24;
-    let minutes = Math.floor(duration / 60) % 60;
-    let seconds = Math.floor(duration) % 60;
-
-    let days_t = days.toString().padStart(2, 0);
-    let hours_t = hours.toString().padStart(2, 0);
-    let minutes_t = minutes.toString().padStart(2, 0);
-    let seconds_t = seconds.toString().padStart(2, 0);
-
-    timer.textContent = `${days_t}:${hours_t}:${minutes_t}:${seconds_t}`;
-
+// --- Timer ---
+const timer = document.getElementById("timer");
+if (timer) {
+    // Set target to March 30, 2026
+    const PRV = new Date("March 30, 2026 00:00:00").getTime();
     
+    const updateTimer = () => {
+        const now = new Date().getTime();
+        const duration = (PRV - now) / 1000;
+
+        if (duration <= 0) {
+            if (typeof timerId !== 'undefined') clearInterval(timerId);
+            timer.textContent = "00:00:00:00";
+            return;
+        }
+
+        const days = Math.floor(duration / 86400); 
+        const hours = Math.floor((duration % 86400) / 3600);
+        const minutes = Math.floor((duration % 3600) / 60);
+        const seconds = Math.floor(duration % 60);
+
+        const pad = (num) => num.toString().padStart(2, '0');
+        timer.textContent = `${pad(days)}:${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+    };
+
+    updateTimer(); 
+    const timerId = setInterval(updateTimer, 1000);
+}
+
+// --- 1. HEADER OBSERVER (Restored Original Logic) ---
+const headerTrigger = document.querySelector('#scroll-trigger');
+const header = document.querySelector('.header');
+
+const headerObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    // This specific check ensures it only triggers when you scroll PAST the landing page
+    if (entry.boundingClientRect.top <= 0) {
+        header.classList.add('is_visible');
+     } else {
+        // Optional: Remove this else block if you want the header to stay visible 
+        // even if they scroll back up. Your original code only had the 'add'.
+        header.classList.remove('is_visible'); 
+     }
+  });
+});
+
+if(headerTrigger && header) {
+    headerObserver.observe(headerTrigger);
 }
 
 
-//header appear
-const trigger = document.querySelector('#scroll-trigger');
-const header = document.querySelector('.header');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.boundingClientRect.top <= 0) {
-        header.classList.add('is_visible');
-     }
-  });
-});
-
-//animatii de appear
-observer.observe(trigger);
-
-const appearanceObserver = new IntersectionObserver((entries) => {
+// --- 2. GENERAL ANIMATION OBSERVER (Optimized) ---
+// We keep this separate and efficient for the fade-in elements
+const animationObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            appearanceObserver.unobserve(entry.target); 
+            // Logic for generic animations
+            if (entry.target.classList.contains('animate-on-scroll')) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); 
+            }
+            // Logic for Cafeluta
+            if (entry.target.classList.contains('cafeluta_dialog')) {
+                entry.target.classList.add('is_visible');
+                observer.unobserve(entry.target);
+            }
         }
     });
 }, {
-    threshold: 0.25
+    threshold: 0.2
 });
 
-const elementsToWatch = document.querySelectorAll('.animate-on-scroll');
-
-
-elementsToWatch.forEach((element) => {
-    appearanceObserver.observe(element);
+// Attach observer to animations
+document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+    animationObserver.observe(element);
 });
 
-const trigger_cafeluta = document.querySelector('.cafeluta_dialog');
-
-const observer_cafeluta = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-        entry.target.classList.add('is_visible')
-        observer_cafeluta.unobserve(entry.target); 
-     }
-  });
-}, {
-    threshold: 0.3
-});
-
-if(trigger)
-observer_cafeluta.observe(trigger_cafeluta);
+// Attach observer to cafeluta
+const cafeluta = document.querySelector('.cafeluta_dialog');
+if(cafeluta) {
+    animationObserver.observe(cafeluta);
+}
 
 
-//image zoomer
-
-// 1. Select the lightbox elements
+// --- Lightbox / Image Zoom ---
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const closeBtn = document.querySelector('.close-btn');
 
-// 2. Function to open lightbox
-function openLightbox(e) {
-    let source = "";
+if (lightbox && lightboxImg) {
+    const openLightbox = (e) => {
+        let source = "";
+        if (e.target.tagName === 'IMG') {
+            source = e.target.src;
+        } else {
+            // Handle div background images
+            const style = window.getComputedStyle(e.target);
+            const bgImage = style.backgroundImage;
+            if (bgImage && bgImage !== 'none') {
+                source = bgImage.slice(5, -2).replace(/['"]/g, ""); 
+            }
+        }
 
-    // Check if clicked element is an <img> tag
-    if (e.target.tagName === 'IMG') {
-        source = e.target.src;
-    } 
-    // Check if it's a <div> with a background-image
-    else {
-        const style = window.getComputedStyle(e.target);
-        const bgImage = style.backgroundImage;
-        
-        // Clean up the URL (remove 'url("...")')
-        if (bgImage && bgImage !== 'none') {
-            source = bgImage.slice(5, -2); 
+        if (source) {
+            lightboxImg.src = source;
+            lightbox.classList.add('active');
         }
     }
 
-    if (source) {
-        lightboxImg.src = source;
-        lightbox.classList.add('active');
+    const zoomables = document.querySelectorAll('.zoomable');
+    zoomables.forEach(item => {
+        item.addEventListener('click', openLightbox);
+        item.style.cursor = 'zoom-in';
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
     }
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+        }
+    });
 }
 
-// 3. Add event listeners to all "zoomable" items
-const zoomables = document.querySelectorAll('.zoomable');
-
-zoomables.forEach(item => {
-    item.addEventListener('click', openLightbox);
-    item.style.cursor = 'zoom-in'; // UX: show pointer
-});
-
-// 4. Close functions
-closeBtn.addEventListener('click', () => {
-    lightbox.classList.remove('active');
-});
-
-// Close when clicking outside the image
-lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-        lightbox.classList.remove('active');
-    }
-});
-
-//testimonial carousel
-
-// --- Sequential Fade Carousel ---
-
-// --- Testimonial Carousel Logic (Smooth Height) ---
-
-// --- Testimonial Carousel (CSS Grid Method) ---
-
+// --- Optimized Testimonial Carousel (Event Delegation) ---
+const testimonialContainer = document.querySelector('.testimoniale');
 const slides = document.querySelectorAll('.testimonial');
-const nextButtons = document.querySelectorAll('.next');
-const prevButtons = document.querySelectorAll('.prev');
 
-let currentSlide = 0;
+if (testimonialContainer && slides.length > 0) {
+    let currentSlide = 0;
 
-function showSlide(index) {
-    // 1. Remove active class from ALL slides
-    slides.forEach(slide => {
-        slide.classList.remove('active-testimonial');
-    });
+    const showSlide = (index) => {
+        slides.forEach(slide => slide.classList.remove('active-testimonial'));
+        slides[index].classList.add('active-testimonial');
+    };
 
-    // 2. Add active class to the CURRENT slide
-    slides[index].classList.add('active-testimonial');
-}
-
-// Initialize
-if (slides.length > 0) {
+    // Initialize first slide
     showSlide(currentSlide);
+
+    // ONE listener for all buttons instead of multiple loops
+    testimonialContainer.addEventListener('click', (e) => {
+        // Check if the clicked element is a Next button
+        if (e.target.classList.contains('next') || e.target.closest('.next')) {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        // Check if the clicked element is a Prev button
+        else if (e.target.classList.contains('prev') || e.target.closest('.prev')) {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    });
 }
-
-// Next Buttons
-nextButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    });
-});
-
-// Prev Buttons
-prevButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-    });
-});
-
-//detalii probe
-
-// --- PROBE TABS LOGIC ---
-
-// 1. Select all buttons and descriptions
+// --- Probe Tabs ---
 const probeButtons = document.querySelectorAll('.detalii_probe button');
 const probeDescriptions = document.querySelectorAll('.descriere');
 
-function switchProbe(index) {
-    // 1. Hide all descriptions
-    probeDescriptions.forEach(desc => {
-        desc.classList.remove('active-descriere');
-    });
+if (probeButtons.length > 0 && probeDescriptions.length > 0) {
+    function switchProbe(index) {
+        probeDescriptions.forEach(desc => desc.classList.remove('active-descriere'));
+        probeButtons.forEach(btn => btn.classList.remove('active-btn'));
 
-    // 2. Reset all buttons (remove highlight)
-    probeButtons.forEach(btn => {
-        btn.classList.remove('active-btn');
-    });
-
-    // 3. Show the selected description
-    if(probeDescriptions[index]) {
-        probeDescriptions[index].classList.add('active-descriere');
+        if(probeDescriptions[index]) probeDescriptions[index].classList.add('active-descriere');
+        if(probeButtons[index]) probeButtons[index].classList.add('active-btn');
     }
 
-    // 4. Highlight the clicked button
-    if(probeButtons[index]) {
-        probeButtons[index].classList.add('active-btn');
-    }
-}
-
-// Initialize: Show the first probe (index 0) by default
-if (probeDescriptions.length > 0) {
+    // Initialize
     switchProbe(0);
-}
 
-// Add click listeners to buttons
-probeButtons.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-        switchProbe(index);
-        probeDescriptions[index].scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'center' // Centers the text on the screen
+    probeButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            switchProbe(index);
+            if(probeDescriptions[index]) {
+                probeDescriptions[index].scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }
         });
     });
-});
+}
+
+// --- Mobile Hamburger Menu ---
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.header_links');
+const navLinks = document.querySelectorAll('.header_link');
+
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+}
