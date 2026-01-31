@@ -1,7 +1,16 @@
+//remove animation on mobile devices on "probe"
+function isMobile() {
+  const minWidth = 768;
+  return window.innerWidth < minWidth || screen.width < minWidth;
+}
+
+if(isMobile()){
+    document.getElementById("probe").classList.remove("animate-on-scroll");
+}
+
 // --- Timer ---
 const timer = document.getElementById("timer");
 if (timer) {
-    // Set target to March 30, 2026
     const PRV = new Date("March 30, 2026 00:00:00").getTime();
     
     const updateTimer = () => {

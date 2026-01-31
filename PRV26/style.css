@@ -3,6 +3,10 @@
     src: url('fonts/Sarpanch-Regular.woff') format('woff');
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
 #scroll-trigger{
     position: absolute;
     top: 100vh;
@@ -253,7 +257,7 @@
     transform: rotate(-120.39deg);
     bottom: -30vh;
     right: 7vw;
-    width: 15vw;
+    width: 12vw;
 }
 
 #mouse2{
@@ -346,93 +350,93 @@
     left: 10vw;
 }
 
-#C7{
+/* #C7{
     z-index: -1;
-    left: 0;
-    width: 40vw;
-    transform: rotate(-100.27deg);
-    top: calc(50px + 2rem + 20vh);
-}
+    left: -12vw;
+    width: 38vw;
+    transform: rotate(-45deg);
+    top: calc(50px + 2rem + 10vh);
+} */
 
-#C8{
+/* #C8{
     z-index: -1;
     width: 40vw;
     transform: translateX(3%) rotate(100.31deg);
     top: calc(50px + 2rem + 8.7vh)    ;
-}
+} */
 
-#C9{
+/* #C9{
     z-index: -1;
-    right: -5vw;
-    width: 40vw;
-    transform: rotate(-104.18deg);
-    top: calc(50px + 2rem + 20vh);
-}
+    right: -12vw;
+    width: 38vw;
+    transform: scaleX(-1) rotate(-45deg);
+    top: calc(50px + 2rem + 10vh);
+} */
 
 /* main page */
 
 #p1{
-    background: url(photos/photo1.jpg);
+    background: url(photos/carusel1.webp);
     background-position: center;
     background-size: cover;
 }
 
 #p2{
-    background: url(photos/photo2.jpg);
+    background: url(photos/carusel2.webp);
     background-position: center;
     background-size: cover;
 }
 
 #p3{
-    background: url(photos/photo3.jpg);
+    background: url(photos/carusel3.webp);
     background-position: center;
     background-size: cover;
 }
 
 #p4{
-    background: url(photos/photo4.jpg);
+    background: url(photos/carusel4.webp);
     background-position: center;
     background-size: cover;
 }
 
 #p5{
-    background: url(photos/photo5.jpg);
+    background: url(photos/carusel5.webp);
     background-position: center;
     background-size: cover;
 }
 
 #p6{
-    background: url(photos/photo6.jpg);
+    background: url(photos/carusel6.webp);
     background-position: center;
     background-size: cover;
 }
 
 #p7{
-    background: url(photos/photo7.jpg);
+    background: url(photos/carusel7.webp);
     background-position: center;
     background-size: cover;
 }
 
 #p8{
-    background: url(photos/photo8.jpg);
+    background: url(photos/carusel8.webp);
     background-position: center;
     background-size: cover;
 }
 
 #t1{
-    background: url(photos/testimonial1.jpg);
+    background: url(photos/testimonial1.webp);
     background-position: center;
     background-size: cover;
 }
 
 #t2{
-    background: url(photos/testimonial2.jpg);
+    background: url(photos/testimonial2.webp);
     background-position: center;
     background-size: cover;
 }
 
 #t3{
-    background: url(photos/testimonial3.jpg);
+    background: url(photos/testimonial3.webp);
     background-position: center;
     background-size: cover;
 }
@@ -507,7 +511,7 @@ body::before {
     position: fixed; 
     
     /* CHANGED: limit height to the screen height */
-    height: 100vh;   
+    height: 120vh;   
     
     /* Keep these */
     top: 0;
@@ -517,7 +521,7 @@ body::before {
     pointer-events: none;
     
     /* OPTIONAL: Hardware acceleration to reduce lag */
-    transform: translateZ(0); 
+    transform: translateZ(0);
     will-change: transform;
 }
 
@@ -688,15 +692,54 @@ h2{
 #timer{
     font-size: clamp(3rem, 8vw, 15rem);
     color: white;
+
+    /* --- The Metallic Gradient Effect --- */
+    
+    /* 1. Define the metal gradient colors (Silver + Purple tint) */
+    background: linear-gradient(
+        to bottom,
+        #e0e0e0 0%,   /* Light silver top */
+        #ffffff 5%,  /* Shine near top */
+        #A91DBC 60%,  /* Your brand purple in the middle */
+        #A91DBC 100%  /* Back to purple bottom */
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    color: transparent;
+    
+    filter: drop-shadow(0px 0px 5px rgba(169, 29, 188, 0.8))
+            drop-shadow(0px 0px 10px rgba(169, 29, 188, 0.4));
 }
 
 .info_PRV{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
     width: 55vw;
     height: 30vh;
     /* border-style: solid;
     border-color: aqua; */
+}
+
+.info_PRV img{
+    width: 2vw;
+    transition: 0.3s ease-in-out;
+}
+
+.info_PRV img:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.info_PRV span a{
+    text-decoration: none;
+    transition: 0.2 ease-in-out;
+}
+
+.info_PRV span a:hover{
+    text-decoration: underline;
 }
 
 .cand, .unde, .data, .locatie{
@@ -714,46 +757,39 @@ h2{
 }
 
 .data, .locatie{
+    text-align: center;
     font-size: 2vw;
-    align-items: flex-start !important;
+    /* align-items: flex-start !important; */
 }
 
 #c2a_button {
-    /* Shape & Cleaner Look */
-    border: none;                  /* Removed solid border for a cleaner look */
+    border: none;
     border-radius: 50px;
-    padding: 0.8rem 2.2rem;        /* Slightly wider for a modern shape */
-    
-    /* Typography */
-    font-family: inherit;          /* Ensures it matches your site font */
+    padding: 0.8rem 2.2rem;
+    font-family: inherit;
     font-size: clamp(0.8rem, 2.5vw, 4rem); 
     font-weight: bold;             
-    color: #ffffff;                /* Pure white pops better than gray */
-    text-transform: uppercase;     /* Makes it look like a "call to action" */
-    letter-spacing: 1px;           /* Adds elegance */
-
-    /* Color & Glow */
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     background-color: #A91DBC;
-    box-shadow: 0 0 15px rgb(169, 29, 188); /* Soft initial glow */
+    box-shadow: 0 0 15px rgb(169, 29, 188);
     
-    /* Interactions */
     cursor: pointer;
     user-select: none;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother bounce */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     transform: translateY(0);
 }
 
-/* Hover State: "Power Up" Effect */
 #c2a_button:hover {
-    background-color: #be2dd1;     /* Slightly lighter/brighter purple */
-    box-shadow: 0 0 30px rgba(169, 29, 188, 0.7), /* Strong outer glow */
-                0 0 10px rgba(255, 255, 255, 0.2) inset; /* Inner shine */
-    transform: translateY(-3px) scale(1.02); /* Lifts up slightly */
+    background-color: #be2dd1; 
+    box-shadow: 0 0 30px rgba(169, 29, 188, 0.7),
+                0 0 10px rgba(255, 255, 255, 0.2) inset;
+    transform: translateY(-3px) scale(1.02);
 }
 
-/* Active State: Click Feedback */
 #c2a_button:active {
-    transform: translateY(1px) scale(0.98); /* Presses down */
+    transform: translateY(1px) scale(0.98);
     box-shadow: 0 0 10px rgba(169, 29, 188, 0.5);
     background-color: #9016a1;
 }
@@ -777,6 +813,7 @@ h2{
 }
 
 .img_text_flex p{
+    /* text-align: center; */
     background-color: rgba(0, 0, 0, 0.628); 
     flex: 3;
     display: inline;
@@ -784,8 +821,9 @@ h2{
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     border-radius: 25px;
-    font-size: clamp(0.6rem, 1.5vw, 2rem);
+    font-size: clamp(0.6rem, 1.3vw, 2rem);
     margin-right:2.5vw;
+    line-height: calc(clamp(0.6rem, 1.3vw, 2rem) * 1.5);
 }
 
 .img_container{
@@ -797,7 +835,7 @@ h2{
     height: 50vh;
     margin-left: 2.5vw;
 
-    background: url(photos/despre_prv.jpg);
+    background: url(photos/despre_prv.webp);
     background-position: center;
     background-size: cover;
     transition: 0.3s ease-in-out;
@@ -816,8 +854,10 @@ h2{
 }
 
 .ce_trebuie_sa_stii p{
+    text-align: center;
     width: 95vw;
-    font-size: clamp(0.6rem, 1.5vw, 2rem);
+    font-size: clamp(0.6rem, 1.3vw, 2rem);
+    line-height: calc(clamp(0.6rem, 1.3vw, 2rem) * 1.5);
     display: inline;
     padding: 1rem 2rem;
     box-decoration-break: clone;
@@ -998,13 +1038,15 @@ h2{
 .buttons_paragraph p{
     font-style: italic;
     margin: 2rem;
-    font-size: clamp(0.6rem, 1.5vw, 2rem);
+    font-size: clamp(0.6rem, 1.3vw, 2rem);
+    line-height: calc(clamp(0.6rem, 1.3vw, 2rem) * 1.5);
     display: inline;
     padding: 1rem 2rem;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.628); 
+    border: solid white 2px;
 }
 
 .prev{
@@ -1138,7 +1180,6 @@ h2{
 
 .probe_carduri h2{
     font-weight: normal;
-    margin-bottom: 2vh;
 }
 
 .card_probe{
@@ -1150,11 +1191,20 @@ h2{
     height: 80vh;
 }
 
+/* .card_probe h3{
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.6rem, 2vw, 2rem);
+    display: inline;
+    padding: 1rem 2rem;
+} */
+
 .img_container_probe{
     background-color: white;
     width: 100%;
     border-radius: 20px 20px 0px 0px;
     height: clamp(200px, 25vw, 25vw);
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 .detalii_probe{
@@ -1234,8 +1284,10 @@ h2{
 }
 
 .descriere p{
+    text-align: center;
     margin: 2rem;
-    font-size: clamp(0.6rem, 1.5vw, 2rem);
+    font-size: clamp(0.6rem, 1.3vw, 2rem);
+    line-height: calc(clamp(0.6rem, 1.3vw, 2rem) * 1.5);
     display: inline;
     padding: 1rem 2rem;
     box-decoration-break: clone;
@@ -1408,8 +1460,14 @@ h2{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.511) 10%, black 20%);
     /* border-top: solid black; */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.footer img:hover{
+    cursor: pointer;
+    scale: 1.1;
 }
 
 .sigla_BEST{
@@ -1461,7 +1519,8 @@ h2{
 }
 
 .contact{
-    position:absolute;
+    margin-top: 10vh;
+    position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -1469,7 +1528,36 @@ h2{
     justify-content: center;
     gap: 10px;  
     width: 40%;
-    top: 32.0vh;
+}
+
+.footer button{
+    background-color: #A91DBC; ;
+    font-size: clamp(0.6rem, 2vw, 2rem);
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 0.6rem 1.6rem;
+    transition-duration: 0.3s;
+    user-select: none;
+    margin: 2rem 0;
+}
+
+.footer span a{
+    font-size: clamp(0.6rem, 2vw, 2rem);
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+
+.footer span a:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.footer button:hover{
+    scale: 1.02;
+    cursor: pointer;
 }
 
 .contact p{
@@ -1754,14 +1842,16 @@ h2{
     #C4{
         transform: rotate(-84.09deg);
         width: 60vw;
-        top: 33vh;
+        top: auto;
+        bottom: -1vh;
         left: -15vw;
     }
 
     #C5{
         transform: rotate(-133.4deg);
         width: 60vw;
-        top: 35vh;
+        top: auto;
+        bottom: -1vh;
         left: 50vw;
     }
 
@@ -1924,13 +2014,17 @@ h2{
     }
 
     .data, .locatie{
-        font-size: 6.7vw;
+        font-size: 5vw;
     }
 
     .info_PRV{
         width: 100vw;
         height: 20vh;
         /* border: solid white; */
+    }
+
+    .info_PRV img{
+        width: 5vw;
     }
 
     .timer_div #c2a_button{
@@ -1954,6 +2048,7 @@ h2{
 
     .img_text_flex p{
         font-size: 1rem;
+        line-height: calc(1rem * 1.5);
         text-align: center;
         padding: 1.5rem 0.5rem;
         width: 90vw;
@@ -1974,6 +2069,7 @@ h2{
 
     .ce_trebuie_sa_stii p{
         font-size: 1rem;
+        line-height: calc(1rem * 1.5);
         text-align: center;
         padding: 1.5rem 0.5rem;
         width: 90vw;
@@ -2003,12 +2099,13 @@ h2{
     }
 
     .testimoniale_img_nume{
-        margin-left: 3rem;
+        margin-left: 2rem;
     }
 
     .pfp_t{
         width: 10vh;
         height: 10vh;
+        flex-shrink: 0;
     }
 
     .nume_cine_t{
@@ -2016,12 +2113,15 @@ h2{
     }
 
     .buttons_paragraph p{
-        font-size: 1rem;
-        width: 100%;
+        font-size: 0.9rem;
+        line-height: calc(0.9rem * 1.5);
+        margin: 2rem 0.5rem;
+        border: solid white;
+        border-width: 1px;;
     }
 
     #slider_button{
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .cafeluta_poza_div{
@@ -2091,7 +2191,7 @@ h2{
 
     .card_probe{
         height: auto;
-        width: auto;
+        width: 82.5%;
         background-color: black;
         padding: 4vh 10vw;
         border-radius: 20px;
@@ -2113,6 +2213,7 @@ h2{
     .descriere p{
         margin: 1rem;
         font-size: 1rem;
+        line-height: calc(1rem * 1.5);
         text-align: center;
     }
 
@@ -2160,8 +2261,9 @@ h2{
     }
 
     .footer{
-        height: 65vh;
+        height: 75vh;
         margin-top: 3vh;
+        justify-content: flex-start;
     }
 
     .tuiasi{
@@ -2179,8 +2281,7 @@ h2{
     }
 
     .contact{
-        bottom: auto;
-        top: 12vh;
+        margin-top: 15vh;
         width: 100%;
         gap: 20px;
     }
@@ -2190,7 +2291,7 @@ h2{
     }
 
     #footer_img{
-            width: clamp(0.5rem, 3.2vw, 1rem);
+        width: clamp(0.5rem, 3.2vw, 1rem);
     }
 
     .logo_lp{
