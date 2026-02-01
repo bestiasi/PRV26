@@ -911,8 +911,12 @@ h2{
     display: flex;
     align-items: center;
     gap: 20px;
-    animation: spin_right 15s infinite linear;
+    animation: spin_right_2 15s infinite linear;
     padding-right: 20px;
+
+    will-change: transform;
+    flex-shrink: 0;
+    min-width: 100%;
 }
 
 .img_left{
@@ -920,8 +924,13 @@ h2{
     align-items: center;
     gap: 20px;
     margin-bottom: 22vh;
-    animation: spin_left 15s infinite linear;
+    animation: spin_left_2 15s infinite linear;
     padding-right: 20px;
+
+    will-change: transform;
+    flex-shrink: 0;
+    min-width: 100%;
+
 }
 
 .slider_right{
@@ -1749,6 +1758,16 @@ h2{
 @keyframes spin_right{
     from {translate: -100%;}
     to {translate: 0;}
+}
+
+@keyframes spin_left_2 {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes spin_right_2 {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
 }
 
 @keyframes spin_up{
