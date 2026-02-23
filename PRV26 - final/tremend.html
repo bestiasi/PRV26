@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Tremend - Prove It 2026</title>
+    <meta name="description" content="Tremend la Prove It 2026. Află detalii despre tehnologiile folosite și oportunitățile de carieră în Iași.">
+    <meta name="keywords" content="Tremend Iasi, Tremend Prove It, Internship Tremend Iasi, Locuri de munca studenti Iasi, Hackathon Iasi">
+    
+    <meta property="og:title" content="Tremend la Prove It 2026">
+    <meta property="og:description" content="Vezi ce provocare ți-a pregătit echipa Tremend!">
+    <meta property="og:image" content="https://proveit.bestis.ro/logo/Magna_logo.svg.png"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/svg+xml" href="logo/Sigla ProveIt_mica.svg">
+
+    <style>
+
+        .company_page{
+            width: 100vw;
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .company_logo{
+            width: 25vw;
+            height: 25vh;
+            background-color: white;
+            border-radius: 20px;
+
+            margin-top: 5vh;
+            margin-bottom: 2vh;
+        }
+
+        .company_name{
+            font-weight: bold;
+            font-size: clamp(1rem, 2vw, 3rem);
+            text-align: center;
+        }
+
+        .company_description{
+            background-color: rgba(0, 0, 0, 0.7);
+            border: solid rgba(255, 255, 255, 0.7) 2px;
+            border-radius: 15px;
+            padding: 1rem 0;
+
+            margin-top: 10vh;
+
+            width: 97.5vw;
+        }
+
+        .company_description h2{
+            color: #A91DBC;
+            padding-left: 2vw;
+        }
+
+        .company_description p{
+            font-size: clamp(0.6rem, 1.3vw, 2rem);
+            line-height: calc(clamp(0.6rem, 1.3vw, 2rem) * 1.5);
+            padding: 0 2vw;
+        }
+
+        .lang_buttons {
+            display: flex;
+            gap: 15px;
+            padding-left: 2vw;
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+
+        .lang_btn {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: clamp(0.7rem, 1vw, 1.2rem);
+            transition: 0.3s ease;
+        }
+
+        .lang_btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .lang_btn.active_lang {
+            background-color: #A91DBC;
+            border-color: #A91DBC;
+            box-shadow: 0 0 10px rgba(169, 29, 188, 0.5);
+        }
+
+        .hidden_text {
+            display: none;
+        }
+
+        .back2site{
+            margin: 6.7vh;
+        }
+
+        @media screen and (max-width: 768px){
+            .company_logo{
+                height: 12vh;
+                width: 40vw;
+                margin-bottom: 1vh;
+            }
+
+            h2{
+                font-size: clamp(1.5rem, 8vw, 3rem);
+            }
+
+            .company_description{
+                margin-top: 5vh;
+            }
+
+            .company_description p{
+                font-size: 1rem;
+                line-height: calc(1rem * 1.5);
+                text-align: center;
+            }
+
+            .company_name{
+                font-size: 1.5rem;
+            }
+
+            #c2a_button{
+                font-size: 1.3rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>  
+    <main class = "company_page">
+
+            <div class = "company_logo" id = "tremend"></div>
+            <p class = "company_name">Tremend Software Consulting</p>
+
+            <div class = "company_description">
+                
+                <div class="lang_buttons">
+                    <button id="btn_ro" class="lang_btn active_lang">RO</button>
+                    <button id="btn_en" class="lang_btn">EN</button>
+                </div>
+
+                <div id="text_ro">
+
+                    <h2>Despre Tremend</h2>
+                
+                    <p>
+                        <b>Tremend</b> este hub-ul de inginerie din CEE pentru Publicis Sapient, 
+                        parte a Publicis Groupe. De peste 20 de ani, compania își integrează 
+                        expertiza tehnică avansată în soluții inovatoare care deschid drumul 
+                        către un viitor mai bun și mai inteligent.<br><br>Specializată în îmbunătățirea 
+                        experienței clienților, modernizarea organizațională și crearea de 
+                        valoare, Tremend își oferă serviciile prin cadrul SPEED – Strategie și 
+                        Consultanță, Produs, Experiență, Inginerie și Date. Aceste capabilități sunt 
+                        consolidate suplimentar prin parteneriate strategice cu lideri din industrie 
+                        precum Microsoft, Google, AWS și OpenAI.
+
+                    </p>
+                </div>
+
+                <div id="text_en" class="hidden_text">
+
+                    <h2>About Tremend</h2>
+
+                    <p>
+                        <b>Tremend</b> is the CEE Engineering Hub for Publicis Sapient, part of Publicis Groupe.
+                        For over 20 years, the company has been infusing its advanced technical expertise
+                        into innovative solutions that pave the way for a better and smarter future.<br><br>
+                        Specializing in customer experience enhancement, organizational modernization, 
+                        and value creation, Tremend delivers its services through the SPEED framework – 
+                        Strategy and Consulting, Product, Experience, Engineering, and Data. These 
+                        capabilities are further strengthened by strategic partnerships with industry 
+                        leaders such as Microsoft, Google, AWS, and OpenAI. 
+
+                    </p>
+                </div>
+
+            </div>
+
+            <a href = "index.html#tremend" class = "back2site">
+                <button id = "c2a_button" style = " background-color: rgba(255, 255, 255, 0.05); border: solid white 2px;">
+                    Înapoi la site
+                </button>
+            </a>
+
+            <footer class="footer" style="height: auto; padding: 50px 0; margin-top: 0;">
+                <p>© 2026 BEST Iași. Toate drepturile rezervate.</p>
+            </footer>
+    </main>
+
+    <script src="index.js"></script>
+
+    <script>
+        const btnRo = document.getElementById('btn_ro');
+        const btnEn = document.getElementById('btn_en');
+        const textRo = document.getElementById('text_ro');
+        const textEn = document.getElementById('text_en');
+
+        if(btnRo && btnEn && textRo && textEn) {
+            
+            // Switch to Romanian
+            btnRo.addEventListener('click', () => {
+                textRo.style.display = 'block';
+                textEn.style.display = 'none';
+                
+                btnRo.classList.add('active_lang');
+                btnEn.classList.remove('active_lang');
+            });
+
+            // Switch to English
+            btnEn.addEventListener('click', () => {
+                textRo.style.display = 'none';
+                textEn.style.display = 'block';
+                
+                btnEn.classList.add('active_lang');
+                btnRo.classList.remove('active_lang');
+            });
+        }
+    </script>
+</body>
+</html>

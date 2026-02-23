@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Allied Testing - Prove It 2026</title>
+    <meta name="description" content="Allied Testing la Prove It 2026. Află detalii despre tehnologiile folosite și oportunitățile de carieră în Iași.">
+    <meta name="keywords" content="Allied Testing Iasi, Allied Testing Prove It, Internship Allied Testing Iasi, Locuri de munca studenti Iasi, Hackathon Iasi">
+    
+    <meta property="og:title" content="Allied Testing la Prove It 2026">
+    <meta property="og:description" content="Prezentarea Allied Testing în cadrul Prove it 2026!">
+    <meta property="og:image" content="https://proveit.bestis.ro/logo/Magna_logo.svg.png"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/svg+xml" href="logo/Sigla ProveIt_mica.svg">
+
+    <style>
+
+        .company_page{
+            width: 100vw;
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .company_logo{
+            width: 15vw;
+            height: 35vh;
+            background-color: white;
+            border-radius: 20px;
+
+            margin-top: 5vh;
+            margin-bottom: 2vh;
+        }
+
+        .company_name{
+            font-weight: bold;
+            font-size: clamp(1rem, 2vw, 3rem);
+            text-align: center;
+        }
+
+        .company_description{
+            background-color: rgba(0, 0, 0, 0.7);
+            border: solid rgba(255, 255, 255, 0.7) 2px;
+            border-radius: 15px;
+            padding: 1rem 0;
+
+            margin-top: 10vh;
+
+            width: 97.5vw;
+        }
+
+        .company_description h2{
+            color: #A91DBC;
+            padding-left: 2vw;
+        }
+
+        .company_description p{
+            font-size: clamp(0.6rem, 1.3vw, 2rem);
+            line-height: calc(clamp(0.6rem, 1.3vw, 2rem) * 1.5);
+            padding: 0 2vw;
+        }
+
+         .lang_buttons {
+            display: flex;
+            gap: 15px;
+            padding-left: 2vw;
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+
+        .lang_btn {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: clamp(0.7rem, 1vw, 1.2rem);
+            transition: 0.3s ease;
+        }
+
+        .lang_btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .lang_btn.active_lang {
+            background-color: #A91DBC;
+            border-color: #A91DBC;
+            box-shadow: 0 0 10px rgba(169, 29, 188, 0.5);
+        }
+
+        .hidden_text {
+            display: none;
+        }
+
+        .back2site{
+            margin: 6.7vh;
+        }
+
+        @media screen and (max-width: 768px){
+            .company_logo{
+                height: 15vh;
+                width: 15vh;
+                margin-bottom: 1vh;
+            }
+
+            h2{
+                font-size: clamp(1.5rem, 8vw, 3rem);
+            }
+
+            .company_description{
+                margin-top: 5vh;
+            }
+
+            .company_description p{
+                font-size: 1rem;
+                line-height: calc(1rem * 1.5);
+                text-align: center;
+            }
+
+            .company_name{
+                font-size: 1.5rem;
+            }
+
+            #c2a_button{
+                font-size: 1.3rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>  
+    <main class = "company_page">
+
+            <div class = "company_logo" id = "Allied_t"></div>
+            <p class = "company_name">Allied Testing</p>
+
+            <div class = "company_description">
+
+                 <div class="lang_buttons">
+                    <button id="btn_ro" class="lang_btn active_lang">RO</button>
+                    <button id="btn_en" class="lang_btn">EN</button>
+                </div>
+
+                <div id="text_ro">
+
+                <h2>Despre Allied Testing</h2>
+                
+                    <p>
+                        <b>Allied Testing</b>, o companie fondată în SUA în anul 2000, este un lider în domeniul 
+                        asigurării calității (QA) și al testării software, concentrându-se în principal 
+                        pe piețele de capital, tranzacționare și industria financiară. De-a lungul anilor, 
+                        ne-am consolidat reputația de specialiști de top în managementul calității aplicațiilor.
+                        Colaborăm cu directori de IT (CIOs), vicepreședinți de dezvoltare și directori de calitate 
+                        pentru a îmbunătăți stabilitatea și reziliența sistemelor acestora, pentru a 
+                        dezvolta sau optimiza strategiile de QA și de externalizare (sourcing) și pentru a 
+                        prelua sarcini complexe de testare, reducând în același timp costurile aferente acestui 
+                        proces. Allied le oferă clienților săi o gamă completă de servicii QA, de la audit de 
+                        proces și consultanță strategică, până la implementare și furnizare continuă de servicii, 
+                        operând atât la sediul clientului (onsite), cât și în regim offshore sau nearshore. 
+                        Avem o vastă experiență în a acționa ca un Centru de Excelență în QA în cadrul unor 
+                        medii de dezvoltare globale, distribuite și cu furnizori multipli.<br><br>Modelul nostru flexibil 
+                        de colaborare le permite clienților să gestioneze eficient fluctuațiile privind necesarul 
+                        de personal. Expertiza profundă în domeniu, prezența globală și abilitățile tehnice 
+                        remarcabile ale echipei noastre au transformat Allied în partenerul preferat pentru 
+                        Asigurarea Calității de către companii precum Thomson Reuters, Raymond James, TD Ameritrade, 
+                        Citibank, Fitch Solutions, Cetera și altele.
+
+                    </p>
+                </div>
+
+                <div id="text_en" class="hidden_text">
+                    
+                    <h2>About Allied Testing</h2>
+
+                    <p>
+                        <b>Allied Testing</b>, a company founded in US in 2000, is a leading QA and 
+                        testing specialist firm with the main focus on the capital markets, 
+                        trading and finance industry. Over the years we have earned a reputation of 
+                        premiere application quality management specialists. We work with CIOs, VPs of 
+                        Development and Quality Directors to improve stability and resilience of their systems, 
+                        develop or finetune QA and sourcing strategies, and take on nontrivial testing tasks, 
+                        while simultaneously driving down costs of testing. Allied offers its clients a 
+                        full range of QA capabilities, from process audit and strategy consulting to 
+                        implementation and ongoing service delivery, including both onsite and 
+                        offshore/nearshore. We have a strong experience acting as QA Center of 
+                        Excellence in global, distributed, multi-vendor development environments.<br><br>
+                        Our 
+                        flexible engagement model allows our clients to manage peaks and valleys in 
+                        their staffing requirements. Deep domain expertise, global footprint and superb 
+                        technical capabilities of our staff have enabled Allied to become a Quality 
+                        Assurance partner of choice to such companies as Thomson Reuters, Raymond James, 
+                        TD Ameritrade, Citibank, Fitch Solutions, Cetera, and others.
+
+
+                    </p>
+                </div>
+            </div>
+
+            <a href = "index.html#sponsori" class = "back2site">
+                <button id = "c2a_button" style = " background-color: rgba(255, 255, 255, 0.05); border: solid white 2px;">
+                    Înapoi la site
+                </button>
+            </a>
+
+            <footer class="footer" style="height: auto; padding: 50px 0; margin-top: 0;">
+                <p>© 2026 BEST Iași. Toate drepturile rezervate.</p>
+            </footer>
+    </main>
+
+    <script src="index.js"></script>
+
+    <script>
+        const btnRo = document.getElementById('btn_ro');
+        const btnEn = document.getElementById('btn_en');
+        const textRo = document.getElementById('text_ro');
+        const textEn = document.getElementById('text_en');
+
+        if(btnRo && btnEn && textRo && textEn) {
+            
+            // Switch to Romanian
+            btnRo.addEventListener('click', () => {
+                textRo.style.display = 'block';
+                textEn.style.display = 'none';
+                
+                btnRo.classList.add('active_lang');
+                btnEn.classList.remove('active_lang');
+            });
+
+            // Switch to English
+            btnEn.addEventListener('click', () => {
+                textRo.style.display = 'none';
+                textEn.style.display = 'block';
+                
+                btnEn.classList.add('active_lang');
+                btnRo.classList.remove('active_lang');
+            });
+        }
+    </script>
+</body>
+</html>
